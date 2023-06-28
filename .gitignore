@@ -47,3 +47,16 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+
+data
+data/
+
+data_analysis
+data_analysis/
+
+manuscript
+manuscript/
+
+summary
+summary/
