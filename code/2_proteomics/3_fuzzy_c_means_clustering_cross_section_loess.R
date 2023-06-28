@@ -1,6 +1,6 @@
 no_source()
 rm(list = ls())
-masstools::setwd_project()
+setwd(masstools::get_project_wd())
 source("code/tools.R")
 
 library(tidyverse)
@@ -8,6 +8,7 @@ library(tidymass)
 
 ###load("data)
 load("data_analysis/plasma_proteomics/data_preparation/object_cross_section_loess")
+load("data_analysis/plasma_proteomics/data_preparation/object_cross_section")
 
 dir.create(
   "data_analysis/plasma_proteomics/fuzzy_c_means_clustering/cross_section_loess/",
@@ -27,9 +28,13 @@ object_cross_section_loess[1, , drop = TRUE] %>%
   plot()
 
 ######cluster all variables using the age range
-object_cross_section_loess@sample_info$adjusted_age %>% range
+object_cross_section@sample_info$adjusted_age %>%
+  as.numeric() %>%
+  range
 
-object_cross_section_loess@sample_info$adjusted_age %>% plot
+object_cross_section@sample_info$adjusted_age %>%
+  as.numeric() %>%
+  plot
 
 object_cross_section_loess@sample_info %>%
   ggplot(aes(adjusted_age)) +
@@ -41,8 +46,8 @@ age_index <-
 
 apply(age_index, 1, function(x) {
   sum(
-    object_cross_section_loess@sample_info$adjusted_age > x[1] &
-      object_cross_section_loess@sample_info$adjusted_age <= x[2]
+    object_cross_section@sample_info$adjusted_age > x[1] &
+      object_cross_section@sample_info$adjusted_age <= x[2]
   )
 })
 
@@ -55,7 +60,7 @@ temp_data <-
 temp_data_mean <-
   seq_len(nrow(age_index)) %>%
   purrr::map(function(i) {
-    idx <- as.numeric(age_index[i,])
+    idx <- as.numeric(age_index[i, ])
     temp_data[, which(
       object_cross_section_loess@sample_info$adjusted_age > idx[1] &
         object_cross_section_loess@sample_info$adjusted_age <= idx[2]
@@ -86,7 +91,7 @@ object_cross_section_loess[idx, , drop = TRUE] %>%
   density() %>%
   plot()
 
-temp_data[idx, ] %>%
+temp_data[idx,] %>%
   as.numeric() %>%
   density() %>%
   plot()
@@ -127,7 +132,9 @@ plot <-
   data.frame(distance = plot,
              k = seq(2, 40, 2)) %>%
   ggplot(aes(k, distance)) +
-  geom_point(shape = 21, size = 4, fill = "black") +
+  geom_point(shape = 21,
+             size = 4,
+             fill = "black") +
   # geom_smooth() +
   geom_segment(aes(
     x = k,
@@ -262,7 +269,7 @@ for (idx in 1:cluster_number) {
     unlist()
   
   temp <-
-    temp_data[cluster_data$variable_id,] %>%
+    temp_data[cluster_data$variable_id, ] %>%
     data.frame(
       membership = cluster_data$membership,
       .,

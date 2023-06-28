@@ -2,7 +2,7 @@ no_source()
 
 rm(list = ls())
 
-masstools::setwd_project()
+setwd(masstools::get_project_wd())
 
 source("code/tools.R")
 

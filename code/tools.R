@@ -61,9 +61,11 @@ theme_base <-
 
 
 sample_class_color <-
-  c("Blank" = "#6F99ADFF",
+  c(
+    "Blank" = "#6F99ADFF",
     "QC" = "#BC3C29FF",
-    "Subject" = "#E18727FF")
+    "Subject" = "#E18727FF"
+  )
 
 marker_color <-
   c(
@@ -191,9 +193,11 @@ convert_mass_dataset2pmd <-
 
 
 polarity_color <-
-  c("positive" = "#FC4E07",
+  c(
+    "positive" = "#FC4E07",
     "negative" = "#00AFBB",
-    "mix" = "#E7B800")
+    "mix" = "#E7B800"
+  )
 
 
 
@@ -211,7 +215,7 @@ optimize_loess_span <-
             .f = function(idx) {
               temp_result =
                 loess(formula = y ~ x,
-                      data = temp_data[-idx, ],
+                      data = temp_data[-idx,],
                       span = span)
               prediction =
                 try(predict(object = temp_result,
@@ -328,7 +332,7 @@ lm_adjusted_cor <-
       rownames(data_set1) %>%
       purrr::map(function(name) {
         cat(name, " ")
-        x = as.numeric(data_set1[name, ])
+        x = as.numeric(data_set1[name,])
         
         temp_cor =
           purrr::map(
@@ -524,7 +528,7 @@ lm_adjust <-
       rownames(expression_data) %>%
       purrr::map(function(name) {
         # cat(name, " ")
-        x = as.numeric(expression_data[name, ])
+        x = as.numeric(expression_data[name,])
         temp_data =
           data.frame(x = x,
                      sample_info)
@@ -617,7 +621,7 @@ optimize_hc_cluster_number <-
       center <-
         unique(hc_cluster) %>%
         purrr::map(function(cluster) {
-          data[which(hc_cluster == cluster), ] %>%
+          data[which(hc_cluster == cluster),] %>%
             colMeans()
         }) %>%
         dplyr::bind_rows()
@@ -739,6 +743,14 @@ match_sample_id <-
 get_go_result_sim <-
   function(result,
            sim.cutoff = 0.7) {
+    if (nrow(result) == 0) {
+      return(data.frame(
+        name1 = character(),
+        name2 = character(),
+        sim = numeric()
+      ))
+    }
+    
     bp_sim_matrix <-
       simplifyEnrichment::GO_similarity(go_id = result$ID[result$ONTOLOGY == "BP"],
                                         ont = "BP",
@@ -815,85 +827,6 @@ get_go_result_sim <-
   }
 
 
-######this is used for word cloud
-remove_words =
-  c(
-    "to",
-    "of",
-    "in",
-    "type",
-    "pathway",
-    "IX",
-    "part",
-    "positive",
-    "negative",
-    "life",
-    "control",
-    "quality",
-    "body",
-    "late",
-    "cell",
-    "species",
-    "cells",
-    "or",
-    "levels",
-    "as",
-    "on",
-    "by",
-    "small",
-    "other",
-    "involved",
-    "alpha",
-    "specific",
-    "number",
-    "through",
-    "outer",
-    "large",
-    "rough",
-    "early",
-    "via",
-    "smooth",
-    "system",
-    "into",
-    "entry",
-    "and",
-    "T",
-    "based",
-    "within",
-    "from",
-    "built",
-    "mediated",
-    "-",
-    "_",
-    "animal",
-    "the",
-    "free",
-    "a",
-    "pool",
-    "60S",
-    "40S",
-    "and",
-    "chain",
-    "Decay",
-    "enhanced",
-    "independent",
-    "joining",
-    "4",
-    "2",
-    "up",
-    "take",
-    "release",
-    'Like',
-    "presentation",
-    "Class",
-    "I",
-    "mediated",
-    "exchange",
-    "&",
-    "events"
-  )
-
-
 show_matrix_cluster =
   function(result,
            ont = NULL,
@@ -946,7 +879,7 @@ show_matrix_cluster =
     }
     
     cc_order =
-      cc_order[stringr::str_order(cc_order$cluster, numeric = TRUE), ]
+      cc_order[stringr::str_order(cc_order$cluster, numeric = TRUE),]
     
     ####only remain the top 20 cluster2 with smallest P values
     temp_p =
@@ -1253,11 +1186,9 @@ database_color =
   c(
     GO = ggsci::pal_d3()(n = 10)[1],
     KEGG = ggsci::pal_d3()(n = 10)[2],
-    Reactome = ggsci::pal_d3()(n = 10)[3]
+    Reactome = ggsci::pal_d3()(n = 10)[3],
+    HMDB = ggsci::pal_d3()(n = 10)[5]
   )
-
-
-
 
 calculate_jaccard_index <-
   function(x, y) {
@@ -1305,7 +1236,668 @@ genus_color <-
     "Verrucomicrobia"
   )
 
-names(genus_color) <- 
+names(genus_color) <-
   genus_color
 
 genus_color <- gg_color_hue(length(genus_color))
+
+combine_workds <- function(y) {
+  y[y == "acids"] <- "acid"
+  y[y == "Intrinsic"] <- "intrinsic"
+  y[y == "Fatty"] <- "fatty"
+  y[y == "Double"] <- "double"
+  y[y == "Diseases"] <- "disease"
+  y[y == "Activation"] <- "activation"
+  y[y == "Antigen"] <- "antigen"
+  y[y == "Assembly"] <- "assembly"
+  y[y == "Autophagy"] <- "autophagy"
+  y[y == "Cascades"] <- "cascade"
+  y[y == "Cellular"] <- "cellular"
+  y[y == "compounds"] <- "compound"
+  y[y == "Damage"] <- "damaged"
+  y[y == "genes"] <- "gene"
+  y[y == "Genes"] <- "gene"
+  y[y == "heme"] <- "Heme"
+  y[y == "Immune"] <- "immune"
+  y[y == "Infections"] <- "Infection"
+  y[y == "Initiation"] <- "initiation"
+  y[y == "innate"] <- "initiation"
+  y[y == "iron"] <- "Iron"
+  y[y == "mucosal"] <- "mucosa"
+  y[y == "process"] <- "Processing"
+  y[y == "regulate"] <- "regulation"
+  y[y == "regulated"] <- "regulation"
+  y[y == "regulates"] <- "regulation"
+  y[y == "Regulates"] <- "regulation"
+  y[y == "Regulation"] <- "regulation"
+  y[y == "regulators"] <- "regulation"
+  y[y == "Replication"] <- "replication"
+  y[y == "signal"] <- "signaling"
+  y[y == "Signaling"] <- "signaling"
+  y[y == "Stress"] <- "stress"
+  y[y == "Translation"] <- "translation"
+  y[y == "Viral"] <- "virus"
+  y[y == "viral"] <- "virus"
+  y[stringr::str_detect(y, "ubiquinol|ubiquitin|Ubiquitin")] <-
+    "ubiquitination"
+  y[y == "vesicle"] <- "Vesicle"
+  y[y == "transcription"] <- "Transcription"
+  y[y == "Transcriptional"] <- "Transcription"
+  y[y == "subunits"] <- "subunit"
+  y[y == "Strand"] <- "strand"
+  y[y == "Repair"] <- "repair"
+  y[y == "Receptor"] <- "receptor"
+  y[y == "receptor-beta"] <- "receptor"
+  y[y == "receptors"] <- "receptor"
+  y[y == "respiratory"] <- "respiration"
+  y[y == "Respiratory"] <- "Respiratory"
+  y[y == "Response"] <- "response"
+  y[y == "oxidant"] <- "oxidation"
+  y[y == "oxidative"] <- "oxidation"
+  y[y == "Oxidative"] <- "oxidation"
+  y[y == "oxidative"] <- "oxidation"
+  y[y == "oxide"] <- "oxidation"
+  y[y == "oxygen"] <- "oxidation"
+  y[y == "translational"] <- "translation"
+  y[y == "toll-like"] <- "Toll-like"
+  y[y == "stimulates"] <- "stimulus"
+  y[y == "modified"] <- "modification"
+  y[y == "modulates"] <- "modification"
+  y[y == "Mitotic"] <- "mitotic"
+  y[y == "Metabolic"] <- "metabolism"
+  y[y == "Metabolism"] <- "metabolism"
+  y[y == "metabolic"] <- "metabolism"
+  y[y == "metabolic"] <- "derivation"
+  y[y == "derivative"] <- "derivation"
+  y[y == "derivatives"] <- "derivation"
+  y[y == "coupled"] <- "coupling"
+  y[y == "Complex"] <- "complex"
+  y[y == "activate"] <- "activation"
+  y[y == "Activated"] <- "activation"
+  y[y == "activity"] <- "activation"
+  y <- y[!stringr::str_detect(y, "SARS")]
+  y
+}
+
+######this is used for word cloud
+remove_words <-
+  c(
+    "to",
+    "of",
+    "in",
+    "type",
+    "pathway",
+    "IX",
+    "part",
+    "life",
+    "control",
+    "quality",
+    "body",
+    "late",
+    "cell",
+    "species",
+    "cells",
+    "or",
+    "levels",
+    "as",
+    "on",
+    "by",
+    "small",
+    "other",
+    "involved",
+    "alpha",
+    "specific",
+    "number",
+    "through",
+    "outer",
+    "large",
+    "rough",
+    "early",
+    "via",
+    "smooth",
+    "system",
+    "into",
+    "entry",
+    "and",
+    "T",
+    "based",
+    "within",
+    "from",
+    "built",
+    "mediated",
+    "-",
+    "_",
+    "animal",
+    "the",
+    "free",
+    "a",
+    "pool",
+    "60S",
+    "40S",
+    "and",
+    "chain",
+    "Decay",
+    "enhanced",
+    "independent",
+    "joining",
+    "4",
+    "2",
+    "up",
+    "take",
+    "release",
+    'Like',
+    "presentation",
+    "Class",
+    "I",
+    "mediated",
+    "exchange",
+    "&",
+    "events",
+    "B",
+    "an",
+    "",
+    "at",
+    "B",
+    "Base",
+    "c",
+    "E",
+    "during",
+    "for",
+    "Major",
+    "NOTCH",
+    "Of",
+    "Opening",
+    "Pathway",
+    "processing",
+    "free",
+    letters,
+    LETTERS,
+    "family",
+    "them",
+    "ii",
+    "class",
+    1:7,
+    "group",
+    "phase",
+    "ar",
+    "orc",
+    "new",
+    "ap",
+    "ends",
+    "sars-cov-2",
+    "upon",
+    "ix",
+    "major",
+    "System",
+    "with",
+    "affected",
+    "along",
+    "AP",
+    "AR",
+    "associated",
+    "Associated",
+    "association",
+    "containing",
+    "down",
+    "Ends",
+    "II",
+    "SARS-CoV",
+    "ARS-CoV-2-host",
+    "Network",
+    "virus",
+    "regulation",
+    "Processing",
+    "protein",
+    "Protein",
+    "Nonsense",
+    "Nonsense-Mediated",
+    "production",
+    "pathways",
+    "multiple",
+    "scanning",
+    "site",
+    "The",
+    "start",
+    "pattern",
+    "Processing",
+    "Phase",
+    "Packaging"
+  )
+
+
+pahtway_heatmap_all_cluster <-
+  function(result_all_list,
+           word_cloud_list,
+           gene_marker,
+           expression_data,
+           top_pathway = 10,
+           font_size = c(5, 15),
+           word_count_breaks = c(1, 30),
+           show_column_names = FALSE,
+           add_text = FALSE) {
+    library(plyr)
+    library(tidygraph)
+    library(ggraph)
+    library(igraph)
+    library(ComplexHeatmap)
+    library(patchwork)
+    library(sjPlot)
+    
+    temp_info <-
+      seq_along(result_all_list) %>%
+      purrr::map(function(i) {
+        result_all <-
+          result_all_list[[i]] %>%
+          dplyr::mutate(cluster = names(result_all_list)[i]) %>%
+          dplyr::arrange(p.adjust) %>%
+          head(top_pathway)
+        result_all <-
+          result_all %>%
+          dplyr::arrange(p.adjust) %>%
+          plyr::dlply(.variables = .(module_annotation)) %>%
+          purrr::map(
+            .f = function(x) {
+              gene_id <-
+                stringr::str_split(x$geneID, pattern = "/")[[1]]
+              
+              x <-
+                data.frame(x %>% dplyr::select(-geneID),
+                           gene_id, stringsAsFactors = FALSE)
+              
+              gene_id1 =
+                gene_marker$variable_id[match(x$gene_id, gene_marker$ENSEMBL)]
+              gene_id2 =
+                gene_marker$variable_id[match(x$gene_id, gene_marker$UNIPROT)]
+              gene_id3 =
+                gene_marker$variable_id[match(x$gene_id, gene_marker$ENTREZID)]
+              
+              gene_id =
+                data.frame(gene_id1, gene_id2, gene_id3) %>%
+                apply(1, function(x) {
+                  x[!is.na(x)][1]
+                })
+              
+              x$gene_id <-
+                gene_id
+              
+              x$correlation <-
+                gene_marker$correlation[match(x$gene_id, gene_marker$variable_id)]
+              x$p_value <-
+                gene_marker$p_value[match(x$gene_id, gene_marker$variable_id)]
+              x$Count <- nrow(x)
+              x
+            }
+          ) %>%
+          do.call(rbind, .) %>%
+          as.data.frame() %>%
+          dplyr::select(cluster,
+                        module_annotation,
+                        p.adjust,
+                        correlation,
+                        p_value,
+                        Count,
+                        gene_id)
+      }) %>%
+      do.call(rbind, .) %>%
+      as.data.frame()
+    
+    rownames(temp_info) <- NULL
+    
+    temp_info$id <-
+      paste(temp_info$cluster,
+            temp_info$module_annotation, sep = "_")
+    
+    ###quantitative pathways
+    ##heatmap
+    temp_data <-
+      seq_along(result_all_list) %>%
+      purrr::map(function(i) {
+        result_all <-
+          result_all_list[[i]] %>%
+          dplyr::mutate(cluster = as.character(i)) %>%
+          dplyr::arrange(p.adjust) %>%
+          head(top_pathway)
+        
+        pathway <-
+          result_all %>%
+          plyr::dlply(.variables = .(module_annotation)) %>%
+          purrr::map(
+            .f = function(x) {
+              name <- x$module_annotation[1]
+              cluster <- names(result_all_list)[i]
+              gene <- x$geneID %>%
+                stringr::str_split("/") %>%
+                `[[`(1)
+              
+              gene1 =
+                gene_marker$variable_id[match(gene, gene_marker$ENSEMBL)]
+              gene2 =
+                gene_marker$variable_id[match(gene, gene_marker$ENTREZID)]
+              gene3 =
+                gene_marker$variable_id[match(gene, gene_marker$UNIPROT)]
+              
+              gene =
+                data.frame(gene1, gene2, gene3) %>%
+                apply(1, function(x) {
+                  x[!is.na(x)][1]
+                })
+              
+              data <- expression_data[gene,] %>%
+                as.data.frame() %>%
+                apply(2, mean) %>%
+                as.data.frame() %>%
+                t() %>%
+                as.data.frame()
+              
+              data <-
+                data.frame(
+                  name,
+                  cluster = cluster,
+                  data,
+                  stringsAsFactors = FALSE,
+                  check.names = FALSE
+                )
+              
+              data
+            }
+          ) %>%
+          do.call(rbind, .) %>%
+          as.data.frame()
+        
+        pathway_data <- pathway %>%
+          dplyr::select(-c(name, cluster))
+        
+        range(pathway_data)
+        
+        if (abs(range(pathway_data)[1]) > range(pathway_data)[2]) {
+          pathway_data[pathway_data < -range(pathway_data)[2]] <-
+            -range(pathway_data)[2]
+        } else{
+          pathway_data[pathway_data > -range(pathway_data)[1]] <-
+            -range(pathway_data)[1]
+        }
+        
+        rownames(pathway) <-
+          rownames(pathway_data) <-
+          paste(pathway$cluster, pathway$name, sep = "_")
+        
+        list(pathway = pathway, pathway_data = pathway_data)
+      })
+    
+    pathway <-
+      temp_data %>%
+      purrr::map(function(x) {
+        x$pathway
+      }) %>%
+      do.call(rbind, .) %>%
+      as.data.frame()
+    
+    pathway_data <-
+      temp_data %>%
+      purrr::map(function(x) {
+        x$pathway_data
+      }) %>%
+      do.call(rbind, .) %>%
+      as.data.frame()
+    
+    rownames(pathway) <-
+      rownames(pathway_data) <-
+      paste(pathway$cluster, pathway$name, sep = "_")
+    
+    lm_reg <-
+      lm(formula = y ~ x,
+         data = data.frame(y = font_size, x = word_count_breaks))
+    
+    text <-
+      word_cloud_list %>%
+      purrr::map(function(x) {
+        z <-
+          data.frame(text = x) %>%
+          dplyr::group_by(text) %>%
+          dplyr::summarise(fontsize = dplyr::n()) %>%
+          as.data.frame()
+        if (nrow(z) > 50) {
+          z <- z %>%
+            dplyr::filter(fontsize > 1)
+        }
+        z$fontsize <-
+          predict(lm_reg, newdata = data.frame(x = z$fontsize))
+        z %>%
+          dplyr::arrange(dplyr::desc(fontsize)) %>%
+          head(20)
+      })
+    
+    names(text) <- unique(pathway$cluster)
+    
+    align_to = unique(pathway$cluster) %>%
+      lapply(function(z) {
+        which(pathway$cluster == z)
+      })
+    
+    names(align_to) <-
+      unique(pathway$cluster)
+    
+    col <-
+      RColorBrewer::brewer.pal(n = 9, name = "BrBG")[1:length(unique(pathway$cluster))]
+    
+    names(col) <-
+      unique(pathway$cluster)
+    
+    ###important genes heatmap
+    library(circlize)
+    col_fun <-
+      colorRamp2(seq(min(as.matrix(pathway_data)),
+                     max(as.matrix(pathway_data)), length.out = 9),
+                 rev(RColorBrewer::brewer.pal(n = 9, name = "BrBG")))
+    
+    if (add_text) {
+      ha_left <-
+        rowAnnotation(cluster = anno_block(
+          align_to = align_to,
+          panel_fun = function(index, nm) {
+            grid.rect(gp = gpar(fill = col[nm]))
+            grid.text(stringr::str_replace(nm, "Cluster", ""),
+                      0.5, 0.5)
+          },
+          width = unit(0.3, "cm")
+        ))
+      
+      cor <-
+        temp_info %>%
+        dplyr::select(id, correlation, gene_id) %>%
+        tidyr::pivot_wider(names_from = "gene_id",
+                           values_from = "correlation") %>%
+        as.data.frame()
+      
+      rownames(cor) <- cor$id
+      cor <-
+        cor %>%
+        dplyr::select(-id) %>%
+        as.matrix()
+      
+      mean_cor <-
+        apply(as.data.frame(cor), 1, function(x) {
+          mean(x, na.rm = TRUE)
+        })
+      
+      cor_col <-
+        circlize::colorRamp2(breaks = c(-1, 0, 1),
+                             colors = c("darkblue", "white", "red"))
+      
+      ha_right <-
+        rowAnnotation(
+          Correlation = anno_boxplot(
+            x = cor,
+            width = unit(1, "cm"),
+            outline = FALSE,
+            gp = gpar(fill = cor_col(mean_cor))
+          ),
+          Count = anno_points(
+            x = temp_info %>%
+              dplyr::distinct(id, .keep_all = TRUE)
+            %>% pull(Count),
+            width = unit(1, "cm")
+          ),
+          textbox = anno_textbox(
+            align_to = pathway$cluster,
+            text = text,
+            max_width = unit(40, "mm"),
+            word_wrap = FALSE
+          )
+        )
+      
+      rownames(pathway_data) <-
+        rownames(pathway_data) %>%
+        stringr::str_replace("cluster", "")
+      
+      plot2 <-
+        Heatmap(
+          as.matrix(pathway_data),
+          cluster_columns = FALSE,
+          cluster_rows = FALSE,
+          show_row_names = TRUE,
+          row_names_side = "left",
+          row_names_gp = gpar(cex = 0.7),
+          show_column_names = show_column_names,
+          border = TRUE,
+          col = col_fun,
+          name = "z-score",
+          clustering_method_rows = "ward.D",
+          column_names_rot = 45,
+          column_title = NULL,
+          column_names_gp = gpar(cex = 0.5),
+          row_split = pathway$cluster,
+          row_title = NULL,
+          left_annotation = ha_left,
+          right_annotation = ha_right
+        )
+      
+    } else{
+      ha_right <-
+        rowAnnotation(score = anno_points(x = score),
+                      recover_score = anno_points(x = recover_score))
+      
+      ha_left <-
+        rowAnnotation(cluster = anno_block(
+          align_to = align_to,
+          panel_fun = function(index, nm) {
+            grid.rect(gp = gpar(fill = col[nm]))
+            grid.text(nm, 0.5, 0.5)
+          },
+          width = unit(0.5, "cm")
+        ))
+      
+      plot2 <-
+        Heatmap(
+          as.matrix(pathway_data),
+          cluster_columns = FALSE,
+          cluster_rows = FALSE,
+          show_row_names = FALSE,
+          show_column_names = show_column_names,
+          border = TRUE,
+          col = col_fun,
+          name = "z-score",
+          clustering_method_rows = "ward.D",
+          column_names_rot = 45,
+          column_split = c(rep(1, sum(
+            colnames(pathway_data) != "PP"
+          )),
+          rep(2, 1)),
+          column_title = NULL,
+          row_split = pathway$cluster,
+          row_title = NULL,
+          right_annotation = ha_right,
+          left_annotation = ha_left
+        )
+    }
+    
+    library(ggplotify)
+    
+    plot2 <- as.ggplot(plot2)
+    plot2
+  }
+
+
+mci_test <- function(x, y, times = 1000) {
+  mic <- minerva::mine(x, y)$MIC
+  ####permutation to get the p values
+  null_distributation <-
+    purrr::map(1:times, function(i) {
+      minerva::mine(x, sample(y, length(y), replace = FALSE))$MIC
+    }) %>%
+    unlist()
+  ####get p value
+  mean_value <-
+    mean(null_distributation)
+  sd_value <-
+    sd(null_distributation)
+  normal_distributation <-
+    rnorm(n = 100000, mean = mean_value, sd = sd_value)
+  p_value <-
+    1 - sum(mic > normal_distributation) / 100000
+  rm("normal_distributation")
+  gc()
+  data.frame(mic = mic,
+             p_value = p_value)
+}
+
+
+
+
+network_class_color <-
+  c(
+    "function" = ggsci::pal_futurama()(n = 4)[1],
+    "module" = ggsci::pal_futurama()(n = 4)[2],
+    "pathway" = ggsci::pal_futurama()(n = 4)[3],
+    "gene" = "#8DD3C7",
+    "protein" = "#FFED6F",
+    "metabolite" = "#BEBADA"
+  )
+
+
+
+new_coords <- function(range_left = 0,
+                       range_right = 100,
+                       old_x = c(5, 60, 10),
+                       scale = FALSE) {
+  if (scale) {
+    temp = data.frame(
+      x = c(min(old_x), max(old_x)),
+      y = c(range_left, range_right)
+    )
+    lm_reg <- lm(y ~ x, data = temp)
+    temp <-
+    coefficients(lm_reg)[2] * old_x + coefficients(lm_reg)[1]
+    return(temp)
+  }
+  if (length(old_x) == 1) {
+    return(mean(c(range_left, range_right)))
+  }
+  
+  if (length(old_x) == 2) {
+    new_x <- data.frame(old_x,
+                        rank = rank(old_x),
+                        original_index = seq_along(old_x)) %>%
+      dplyr::arrange(rank) %>%
+      dplyr::mutate(new_x = c(range_left, range_right)) %>%
+      dplyr::arrange(original_index) %>%
+      pull(new_x)
+    return(new_x)
+  }
+  
+  if (length(old_x) > 2) {
+    new_x <- data.frame(old_x,
+                        rank = rank(old_x),
+                        original_index = seq_along(old_x)) %>%
+      dplyr::arrange(rank) %>%
+      dplyr::mutate(new_x = seq(
+        from = range_left,
+        to = range_right,
+        length.out = length(old_x)
+      )) %>%
+      dplyr::arrange(original_index) %>%
+      pull(new_x)
+    return(new_x)
+  }
+  
+}

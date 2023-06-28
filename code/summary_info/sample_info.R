@@ -1,6 +1,6 @@
 no_source()
 
-masstools::setwd_project()
+setwd(masstools::get_project_wd())
 
 load(
   "data_analysis/combined_omics/data_preparation/cross_section_loess/object_cross_section_loess"
@@ -152,6 +152,23 @@ temp_data <-
   dplyr::filter(!is.na(collection_date)) %>%
   dplyr::distinct(subject_id_random, collection_date, class, .keep_all = TRUE)
 
+library(plyr)
+temp_20230607 <-
+temp_data %>% 
+  plyr::dlply(.variables = .(subject_id_random)) %>% 
+  purrr::map(function(x){
+    number = nrow(x)
+    day = range(x$collection_date)[2] -
+      range(x$collection_date)[1]
+    data.frame(day = as.numeric(day), number)
+  }) %>% 
+  do.call(rbind, .) %>% 
+  as.data.frame()
+  
+range(temp_20230607$day)
+mean(temp_20230607$day)
+mean(temp_20230607$number)
+
 plot <-
   temp_data %>%
   ggplot(aes(collection_date, subject_id_random)) +
@@ -162,10 +179,10 @@ plot <-
   theme(panel.grid.minor = element_blank()) +
   labs(x = "Collection date", y = "")
 
-ggsave(plot,
-       filename = "sample_collection.pdf",
-       width = 7,
-       height = 7)
+# ggsave(plot,
+#        filename = "sample_collection.pdf",
+#        width = 7,
+#        height = 7)
 
 transcriptome_sample_info$class <- "transcriptome"
 proteomics_sample_info$class <- "proteomics"

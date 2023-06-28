@@ -1,7 +1,7 @@
 no_function()
 
 ###
-masstools::setwd_project()
+setwd(masstools::get_project_wd())
 rm(list = ls())
 
 source("code/tools.R")
@@ -41,7 +41,7 @@ for (i in seq_along(variable_info$variable_id)) {
   temp_variable_id <- variable_info$variable_id[i]
   cat(i, " ")
   temp_data <-
-    data.frame(value = as.numeric(expression_data[temp_variable_id,]),
+    data.frame(value = as.numeric(expression_data[temp_variable_id, ]),
                sample_info)
   
   optimize_span <-
@@ -87,9 +87,9 @@ load("new_expression_data")
 #   }) %>%
 #   `>`(0) %>%
 #   which()
-# 
+#
 # plot(as.numeric(new_expression_data[negative_idx[1], ]))
-# 
+#
 # new_expression_data[which(new_expression_data < 0, arr.ind = TRUE)] <-
 #   0
 
@@ -119,9 +119,11 @@ object_cross_section_loess@sample_info <-
   new_sample_info
 
 
-new_sample_info_note <- 
-  data.frame(name = c("sample_id", "class", "subject_id"),
-             meaning = c("sample_id", "class", "subject_id"))
+new_sample_info_note <-
+  data.frame(
+    name = c("sample_id", "class", "subject_id"),
+    meaning = c("sample_id", "class", "subject_id")
+  )
 
 object_cross_section_loess@sample_info_note <-
   new_sample_info_note

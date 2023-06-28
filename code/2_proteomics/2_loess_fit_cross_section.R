@@ -1,7 +1,7 @@
 no_function()
 
 ###
-masstools::setwd_project()
+setwd(masstools::get_project_wd())
 rm(list = ls())
 
 source("code/tools.R")
@@ -41,7 +41,7 @@ for (i in seq_along(variable_info$variable_id)) {
   temp_variable_id <- variable_info$variable_id[i]
   cat(i, " ")
   temp_data <-
-    data.frame(value = as.numeric(expression_data[temp_variable_id, ]),
+    data.frame(value = as.numeric(expression_data[temp_variable_id,]),
                sample_info)
   
   optimize_span <-
@@ -65,14 +65,6 @@ for (i in seq_along(variable_info$variable_id)) {
   #   ggplot(aes(age, value)) +
   #   geom_point(size = 2) +
   #   geom_smooth(method = "loess",
-  #               color = ggsci::pal_aaas()(n=9)[8],
-  #               se = FALSE,
-  #               span = 0.1) +
-  #   geom_smooth(method = "loess",
-  #               color = ggsci::pal_aaas()(n=9)[7],
-  #               se = FALSE,
-  #               span = 0.2) +
-  #   geom_smooth(method = "loess",
   #               color = ggsci::pal_aaas()(n=9)[1],
   #               se = FALSE,
   #               span = 0.3) +
@@ -92,8 +84,8 @@ for (i in seq_along(variable_info$variable_id)) {
   #               color = ggsci::pal_aaas()(n=9)[6],
   #               se = FALSE,
   #               span = 0.7) +
-  #   theme_base +
-  #   labs(x = "Age (years)", y = "Value", title = paste0("Span: ", span))
+  #   theme_base 
+    # labs(x = "Age (years)", y = "Value", title = paste0("Span: ", span))
   #
   # ggsave(plot,
   #        filename = file.path("plot", paste0(temp_variable_id, "all_span.pdf")),
@@ -143,7 +135,6 @@ for (i in seq_along(variable_info$variable_id)) {
   # ggsave(plot,
   #        filename = file.path("plot", paste0(temp_variable_id, ".pdf")),
   #        width = 9, height = 7)
-  
   
   new_expression_data[[i]] <- as.numeric(prediction_value)
 }

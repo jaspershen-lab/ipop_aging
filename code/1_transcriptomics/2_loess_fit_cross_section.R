@@ -1,7 +1,7 @@
 no_function()
 
 ###
-masstools::setwd_project()
+setwd(masstools::get_project_wd())
 rm(list = ls())
 
 source("code/tools.R")
@@ -37,46 +37,46 @@ library(plyr)
 new_expression_data <-
   vector(mode = "list", length = nrow(variable_info))
 
-for (i in seq_along(variable_info$variable_id)) {
-  temp_variable_id <- variable_info$variable_id[i]
-  cat(i, " ")
-  temp_data <-
-    data.frame(value = as.numeric(expression_data[temp_variable_id, ]),
-               sample_info)
-  
-  optimize_span <-
-    optimize_loess_span(
-      x = temp_data$adjusted_age,
-      y = temp_data$value,
-      span_range = c(0.3, 0.4, 0.5, 0.6)
-    )
-  
-  span <-
-    optimize_span[[1]]$span[which.min(optimize_span[[1]]$rmse)]
-  
-  value <- temp_data$value
-  adjusted_age <- temp_data$adjusted_age
-  
-  ls_reg <-
-    loess(value ~ adjusted_age,
-          span = span)
-  
-  prediction_value =
-    predict(ls_reg,
-            newdata = data.frame(adjusted_age = seq(26, 75, by = 0.5)))
-  new_expression_data[[i]] <- as.numeric(prediction_value)
-}
-
-new_expression_data <-
-  new_expression_data %>%
-  do.call(rbind, .) %>%
-  as.data.frame()
-
-colnames(new_expression_data) <-
-  as.character(seq(26, 75, by = 0.5))
-
-rownames(new_expression_data) <- rownames(expression_data)
-save(new_expression_data, file = "new_expression_data")
+# for (i in seq_along(variable_info$variable_id)) {
+#   temp_variable_id <- variable_info$variable_id[i]
+#   cat(i, " ")
+#   temp_data <-
+#     data.frame(value = as.numeric(expression_data[temp_variable_id, ]),
+#                sample_info)
+#   
+#   optimize_span <-
+#     optimize_loess_span(
+#       x = temp_data$adjusted_age,
+#       y = temp_data$value,
+#       span_range = c(0.3, 0.4, 0.5, 0.6)
+#     )
+#   
+#   span <-
+#     optimize_span[[1]]$span[which.min(optimize_span[[1]]$rmse)]
+#   
+#   value <- temp_data$value
+#   adjusted_age <- temp_data$adjusted_age
+#   
+#   ls_reg <-
+#     loess(value ~ adjusted_age,
+#           span = span)
+#   
+#   prediction_value =
+#     predict(ls_reg,
+#             newdata = data.frame(adjusted_age = seq(26, 75, by = 0.5)))
+#   new_expression_data[[i]] <- as.numeric(prediction_value)
+# }
+# 
+# new_expression_data <-
+#   new_expression_data %>%
+#   do.call(rbind, .) %>%
+#   as.data.frame()
+# 
+# colnames(new_expression_data) <-
+#   as.character(seq(26, 75, by = 0.5))
+# 
+# rownames(new_expression_data) <- rownames(expression_data)
+# save(new_expression_data, file = "new_expression_data")
 
 load("new_expression_data")
 

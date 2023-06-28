@@ -2,7 +2,7 @@ no_source()
 
 rm(list = ls())
 
-masstools::setwd_project()
+setwd(masstools::get_project_wd())
 library(tidyverse)
 
 load("data_analysis/plasma_proteomics/data_preparation/object_cross_section_loess")

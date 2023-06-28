@@ -1,6 +1,6 @@
 no_source()
 
-masstools::setwd_project()
+setwd(masstools::get_project_wd())
 rm(list = ls())
 source("code/tools.R")
 
@@ -801,10 +801,10 @@ plot_age <-
   )
 plot_age
 
-ggsave(plot_age,
-       filename = "plot_age.pdf",
-       width = 3,
-       height = 10)
+# ggsave(plot_age,
+#        filename = "plot_age.pdf",
+#        width = 3,
+#        height = 10)
 
 ###BMI
 
@@ -835,10 +835,10 @@ plot_bmi <-
   )
 plot_bmi
 
-ggsave(plot_bmi,
-       filename = "plot_bmi.pdf",
-       width = 3,
-       height = 10)
+# ggsave(plot_bmi,
+#        filename = "plot_bmi.pdf",
+#        width = 3,
+#        height = 10)
 
 ##sex
 
@@ -1086,6 +1086,15 @@ plot
 #        width = 4,
 #        height = 8)
 
+temp_data %>%
+  dplyr::filter(class != "non") %>% 
+  dplyr::arrange(desc(number))
+
+temp_data %>% 
+  dplyr::filter(subject_id_random == "ZOZOW1T")
+
+temp_data2 %>%
+  dplyr::arrange(desc(days))
 
 dim(transcriptome_sample_info)
 dim(transcriptome_subject_info)
@@ -1117,7 +1126,6 @@ dim(oral_microbiome_subject_info)
 dim(nasal_microbiome_sample_info)
 dim(nasal_microbiome_subject_info)
 
-
 ###age and sex distributation
 plot <-
   df %>%
@@ -1131,10 +1139,10 @@ plot <-
   theme(legend.position = c(0, 1),
         legend.justification = c(0, 1))
 plot
-ggsave(plot,
-       filename = "age_sex.pdf",
-       width = 7,
-       height = 7)
+# ggsave(plot,
+#        filename = "age_sex.pdf",
+#        width = 7,
+#        height = 7)
 
 ###age and ethnicity distributation
 plot <-
@@ -1150,10 +1158,10 @@ plot <-
         legend.justification = c(0, 1))
 
 plot
-ggsave(plot,
-       filename = "age_ethnicity.pdf",
-       width = 7,
-       height = 7)
+# ggsave(plot,
+#        filename = "age_ethnicity.pdf",
+#        width = 7,
+#        height = 7)
 
 ###age and IRIS distributation
 plot <-
@@ -1169,10 +1177,10 @@ plot <-
         legend.justification = c(0, 1))
 
 plot
-ggsave(plot,
-       filename = "age_iris.pdf",
-       width = 7,
-       height = 7)
+# ggsave(plot,
+#        filename = "age_iris.pdf",
+#        width = 7,
+#        height = 7)
 
 
 ###age and BMI distributation
@@ -1189,7 +1197,7 @@ plot <-
 
 plot
 
-ggsave(plot,
-       filename = "age_bmi.pdf",
-       width = 7,
-       height = 7)
+# ggsave(plot,
+#        filename = "age_bmi.pdf",
+#        width = 7,
+#        height = 7)
