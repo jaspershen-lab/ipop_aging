@@ -38,7 +38,6 @@ temp =
 dim(temp)
 sum(temp$from == temp$to)
 
-
 load("metabolomics_node")
 load("metabolomics_edge")
 
@@ -308,5 +307,5 @@ plot <-
 
 plot
 
-ggsave(plot, filename = "network.pdf", width = 10, height = 6)
+# ggsave(plot, filename = "network.pdf", width = 10, height = 6)
 

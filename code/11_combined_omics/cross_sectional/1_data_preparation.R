@@ -287,7 +287,6 @@ nasal_microbiome_object@expression_data <-
   t() %>%
   as.data.frame()
 
-
 object_cross_section <-
   rbind(
     transcriptome_object[, intersect_sample_id],
