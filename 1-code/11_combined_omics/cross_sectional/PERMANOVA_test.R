@@ -1,7 +1,7 @@
 no_source()
 
 rm(list = ls())
-setwd(masstools::get_project_wd())
+setwd(r4projects::get_project_wd())
 source("1-code/100-tools.R")
 
 library(tidyverse)
@@ -206,7 +206,7 @@ nasal_microbiome_permanova_result$R2
 #   do.call(rbind, .) %>%
 #   as.data.frame()
 
-setwd(masstools::get_project_wd())
+setwd(r4projects::get_project_wd())
 ###load("data)
 load(
   "3-data_analysis/plasma_transcriptome/linear_spearman/cross_section/pls_performance"
