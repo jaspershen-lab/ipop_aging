@@ -8,12 +8,12 @@ library(tidyverse)
 library(tidymass)
 
 ###load("data)
-load("3-data_analysis/gut_microbiome/data_preparation/object_cross_section_loess")
+load("3-data_analysis/plasma_lipidomics/data_preparation/object_cross_section_loess")
 
-dir.create("3-data_analysis/gut_microbiome/DEG/cross_section_loess/",
+dir.create("3-data_analysis/plasma_lipidomics/DEG/cross_section_loess/",
            recursive = TRUE)
 
-setwd("3-data_analysis/gut_microbiome/DEG/cross_section_loess")
+setwd("3-data_analysis/plasma_lipidomics/DEG/cross_section_loess")
 
 object_cross_section_loess
 
@@ -59,7 +59,7 @@ library(rstatix)
 subject_data <-
   extract_expression_data(object_cross_section_loess) %>%
   apply(1, function(x) {
-    (x - mean(x)) / sd(x)
+    (x - mean(x))
   }) %>%
   t() %>%
   as.data.frame()
@@ -83,42 +83,42 @@ library(plyr)
 #           x = x,
 #           stringsAsFactors = FALSE
 #         )
-#
+#       
 #       res.aov <-
 #         temp_data %>%
 #         anova_test(x ~ age_range)
-#
+#       
 #       p <-
 #         as.data.frame(get_anova_table(res.aov))$p
-#
+#       
 #       # pairwise comparisons
 #       pwc <- temp_data %>%
 #         pairwise_t_test(x ~ age_range,
 #                         paired = FALSE,
 #                         p.adjust.method = "fdr")
 #       # pwc
-#
+#       
 #       p2 <-
 #         pwc[, c(2, 3, 8, 9)]
-#
+#       
 #       name <- paste(pwc$group2, pwc$group1, sep = "_")
-#
+#       
 #       p2 <- matrix(pwc$p, nrow = 1)
-#
+#       
 #       colnames(p2) <- name
-#
+#       
 #       p <-
 #         data.frame(p, p2, stringsAsFactors = FALSE, check.names = FALSE)
-#
+#       
 #       p
-#
+#       
 #     }
 #   )
-#
+# 
 # anova_p <- anova_p %>%
 #   do.call(rbind, .) %>%
 #   as.data.frame()
-#
+# 
 # save(anova_p, file = "anova_p")
 load("anova_p")
 
@@ -129,6 +129,11 @@ anova_marker_name <-
   rownames(anova_p)[which(anova_p$p_adjust < 0.05)]
 
 # save(anova_marker_name, file = "anova_marker_name")
+load("anova_marker_name")
+
+length(anova_marker_name)
+
+dim(anova_p)
 
 length(anova_marker_name)
 
@@ -164,15 +169,7 @@ subject_data2 <-
 #   pbapply::pblapply(subject_data2[-1], function(x) {
 #     p_value <-
 #       lapply(1:ncol(x), function(idx) {
-#         # cat(idx, " ")
-#         p <-
-#           tryCatch(
-#             t.test(x[, idx], subject_data2[[1]][, idx], paired = FALSE)$p.value,
-#             error = function(e) {
-#               1
-#             }
-#           )
-#         p
+#         t.test(x[, idx], subject_data2[[1]][, idx], paired = FALSE)$p.value
 #       }) %>%
 #       unlist() %>%
 #       p.adjust(method = "fdr")
@@ -292,7 +289,7 @@ plot1 <-
   scale_x_discrete(expand = c(.1, .1)) +
   ggalluvial::geom_flow() +
   labs(x = "", y = "") +
-  scale_fill_manual(values = c("changed" = unname(omics_color["gut_microbiome"]),
+  scale_fill_manual(values = c("changed" = unname(omics_color["lipidomics"]),
                                "no" = "grey")) +
   ggalluvial::geom_stratum(alpha = 1, color = "black") +
   # geom_text(stat = "stratum", size = 3) +
@@ -311,10 +308,10 @@ plot1 <-
 
 plot1
 
-ggsave(
-  plot1,
-  file = file.path("marker_in_different_points", "gene_sankey_light.pdf"),
-  width = 14,
-  height = 7,
-  bg = "transparent"
-)
+# ggsave(
+#   plot1,
+#   file = file.path("marker_in_different_points", "gene_sankey_light.pdf"),
+#   width = 14,
+#   height = 7,
+#   bg = "transparent"
+# )

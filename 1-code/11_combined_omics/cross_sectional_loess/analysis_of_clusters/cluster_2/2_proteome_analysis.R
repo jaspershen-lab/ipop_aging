@@ -68,6 +68,3 @@ cluster2_proteomics$UNIPROT
 
 
 
-
-
-

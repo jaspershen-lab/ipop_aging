@@ -4,6 +4,8 @@ setwd(r4projects::get_project_wd())
 rm(list = ls())
 source("1-code/100-tools.R")
 
+library(tidyverse)
+
 load("3-data_analysis/phenotype/data_preparation/phenotype_data")
 
 load("3-data_analysis/plasma_cytokine/data_preparation/object")
@@ -33,8 +35,6 @@ lipidomics_sample_info %>%
     x %>%
       pull(SSPG)
   })
-
-
 
 lipidomics_object <-
   object
@@ -515,6 +515,27 @@ subject_info <-
 subject_info$subject_id_random <-
   masstools::name_duplicated(subject_info$subject_id_random)
 
+library(openxlsx)
+wb <- createWorkbook()
+modifyBaseFont(wb, fontSize = 12, fontName = "Times New Roma")
+addWorksheet(wb, sheetName = "participant infor", gridLines = TRUE)
+freezePane(wb,
+           sheet = 1,
+           firstRow = TRUE,
+           firstCol = TRUE)
+writeDataTable(
+  wb,
+  sheet = 1,
+  x = subject_info,
+  colNames = TRUE,
+  rowNames = FALSE
+)
+saveWorkbook(
+  wb,
+  "subject_info.xlsx",
+  overwrite = TRUE
+)
+
 ####IRIS
 temp <-
   seq(from = 30, to = 70, by = 1) %>%
@@ -556,7 +577,6 @@ temp %>%
   }) %>%
   unlist()
 
-
 plot <-
   temp %>%
   ggplot(aes(x = x, y = n)) +
@@ -566,10 +586,10 @@ plot <-
   theme_base +
   labs(x = "Age range", y = "Participant number")
 plot
-ggsave(plot,
-       filename = "iris_distribution.pdf",
-       width = 10,
-       height = 6)
+# ggsave(plot,
+#        filename = "iris_distribution.pdf",
+#        width = 10,
+#        height = 6)
 
 
 
@@ -598,7 +618,6 @@ temp %>%
 
 library(plyr)
 
-
 plot <-
   temp %>%
   ggplot(aes(x = x, y = n)) +
@@ -608,12 +627,10 @@ plot <-
   theme_base +
   labs(x = "Age range", y = "Participant number")
 plot
-ggsave(plot,
-       filename = "gender_distribution.pdf",
-       width = 10,
-       height = 6)
-
-
+# ggsave(plot,
+#        filename = "gender_distribution.pdf",
+#        width = 10,
+#        height = 6)
 
 
 
@@ -639,7 +656,6 @@ temp %>%
 
 library(plyr)
 
-
 plot <-
   temp %>%
   ggplot(aes(x = x, y = n)) +
@@ -649,10 +665,28 @@ plot <-
   theme_base +
   labs(x = "Age range", y = "Participant number")
 plot
-ggsave(plot,
-       filename = "ethnicity_distribution.pdf",
-       width = 10,
-       height = 6)
+# ggsave(plot,
+#        filename = "ethnicity_distribution.pdf",
+#        width = 10,
+#        height = 6)
+
+
+subject_info$adjusted_age
+
+subject_info %>% 
+  dplyr::select_all(contains("day_range"))
+
+time <-
+subject_info %>% 
+  dplyr::select(contains("day_range")) %>% 
+  apply(1, function(x){
+    max(x[!is.na(x)])
+  }) %>% 
+  `/`(365)
+
+data.frame(from = subject_info$adjusted_age,
+           to = subject_info$adjusted_age + time)
+
 
 
 #####circos plot
@@ -1242,6 +1276,27 @@ plot
 #        filename = "sample_number.pdf",
 #        width = 4,
 #        height = 8)
+
+
+plot <-
+temp_data2 %>% 
+  dplyr::left_join(subject_info[,c("subject_id_random", "adjusted_age")], by = "subject_id_random") %>% 
+  dplyr::arrange(adjusted_age, days) %>%
+  dplyr::mutate(subject_id_random = as.character(subject_id_random)) %>% 
+  dplyr::mutate(subject_id_random = factor(subject_id_random, levels = levels(temp_data$subject_id_random))) %>%
+  dplyr::mutate(to = days/365 + adjusted_age) %>% 
+  ggplot(aes(x = subject_id_random)) +
+  geom_segment(aes(xend = subject_id_random, y = adjusted_age, yend = to), 
+               size = 0.5) +
+  geom_hline(yintercept = c(44, 60), color = "red") +
+  theme_bw() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 4),
+        panel.grid.major = element_blank()) +
+  labs(y = "Age", x = "")
+
+plot
+
+ggsave(plot, filename = "age_range.pdf", width = 7, height = 2)
 
 temp_data %>%
   dplyr::filter(class != "non") %>%

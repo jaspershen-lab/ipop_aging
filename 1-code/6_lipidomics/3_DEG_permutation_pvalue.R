@@ -220,7 +220,9 @@ marker_each_point_permutation %>%
 
 all_marker_name_permutation <-
   lapply(marker_each_point_permutation, function(x) {
-    x$variable_id
+    x %>% 
+      dplyr::filter(p_value * 6 < 0.05) %>% 
+      pull(variable_id)
   }) %>%
   unlist() %>%
   unique()

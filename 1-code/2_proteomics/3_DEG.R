@@ -219,7 +219,9 @@ marker_each_point %>%
 
 all_marker_name <-
   lapply(marker_each_point, function(x) {
-    x$variable_id
+    x %>% 
+      dplyr::filter(p_value * 6 < 0.05) %>% 
+      pull(variable_id)
   }) %>%
   unlist() %>%
   unique()
@@ -228,7 +230,7 @@ length(all_marker_name)
 
 getwd()
 
-# save(all_marker_name, file = "all_marker_name")
+save(all_marker_name, file = "all_marker_name")
 
 load("all_marker_name")
 
