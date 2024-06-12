@@ -222,7 +222,9 @@ marker_each_point %>%
 
 all_marker_name <-
   lapply(marker_each_point, function(x) {
-    x$variable_id
+    x %>% 
+      dplyr::filter(p_value * 6 < 0.05) %>% 
+      pull(variable_id)
   }) %>%
   unlist() %>%
   unique()

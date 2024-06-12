@@ -183,10 +183,12 @@ plot <-
   theme(panel.grid.minor = element_blank()) +
   labs(x = "Collection date", y = "")
 plot
+
 # ggsave(plot,
 #        filename = "sample_collection.pdf",
 #        width = 7,
 #        height = 7)
+
 
 transcriptome_sample_info$class <- "transcriptome"
 proteomics_sample_info$class <- "proteomics"

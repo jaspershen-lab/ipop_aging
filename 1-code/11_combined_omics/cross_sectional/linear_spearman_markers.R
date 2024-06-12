@@ -537,7 +537,7 @@ temp1 <-
   length()
 
 temp2 <-
-  sum(transcriptome_variable_info$cor_p < 0.05)
+  sum(transcriptome_variable_info$cor_p  < 0.05)
 
 temp_data <-
   data.frame(group = c("Other",
@@ -559,10 +559,10 @@ plot <-
     palette = c(unname(omics_color["transcriptome"]), "grey")
   )
 plot
-# ggsave(plot,
-#        filename = "transcriptome_donut.pdf",
-#        width = 7,
-#        height = 7)
+ggsave(plot,
+       filename = "transcriptome_donut.pdf",
+       width = 7,
+       height = 7)
 
 # library(ggVennDiagram)
 # library(venneuler)
@@ -609,11 +609,10 @@ plot <-
     palette = c(unname(omics_color["proteomics"]), "grey")
   )
 plot
-# ggsave(plot,
-#        filename = "proteomics_donut.pdf",
-#        width = 7,
-#        height = 7)
-
+ggsave(plot,
+       filename = "proteomics_donut.pdf",
+       width = 7,
+       height = 7)
 
 library(VennDiagram)
 venn.diagram(
@@ -624,7 +623,6 @@ venn.diagram(
   fill = c("red", "darkblue")
 ) %>%
   grid.draw()
-
 
 
 
@@ -658,10 +656,10 @@ plot <-
     palette = c(unname(omics_color["metabolomics"]), "grey")
   )
 plot
-# ggsave(plot,
-#        filename = "metabolomics_donut.pdf",
-#        width = 7,
-#        height = 7)
+ggsave(plot,
+       filename = "metabolomics_donut.pdf",
+       width = 7,
+       height = 7)
 
 library(VennDiagram)
 venn.diagram(
@@ -705,10 +703,10 @@ plot <-
     palette = c(unname(omics_color["cytokine"]), "grey")
   )
 plot
-# ggsave(plot,
-#        filename = "cytokine_donut.pdf",
-#        width = 7,
-#        height = 7)
+ggsave(plot,
+       filename = "cytokine_donut.pdf",
+       width = 7,
+       height = 7)
 
 library(VennDiagram)
 venn.diagram(
@@ -751,10 +749,10 @@ plot <-
     palette = c(unname(omics_color["clinical_test"]), "grey")
   )
 plot
-# ggsave(plot,
-#        filename = "clinical_test_donut.pdf",
-#        width = 7,
-#        height = 7)
+ggsave(plot,
+       filename = "clinical_test_donut.pdf",
+       width = 7,
+       height = 7)
 
 library(VennDiagram)
 venn.diagram(
@@ -797,10 +795,10 @@ plot <-
     palette = c(unname(omics_color["lipidomics"]), "grey")
   )
 plot
-# ggsave(plot,
-#        filename = "lipidomics_donut.pdf",
-#        width = 7,
-#        height = 7)
+ggsave(plot,
+       filename = "lipidomics_donut.pdf",
+       width = 7,
+       height = 7)
 
 
 library(VennDiagram)
@@ -843,10 +841,10 @@ plot <-
     palette = c(unname(omics_color["gut_microbiome"]), "grey")
   )
 plot
-# ggsave(plot,
-#        filename = "gut_microbiome_donut.pdf",
-#        width = 7,
-#        height = 7)
+ggsave(plot,
+       filename = "gut_microbiome_donut.pdf",
+       width = 7,
+       height = 7)
 
 library(VennDiagram)
 venn.diagram(
@@ -889,10 +887,10 @@ plot <-
     palette = c(unname(omics_color["skin_microbiome"]), "grey")
   )
 plot
-# ggsave(plot,
-#        filename = "skin_microbiome_donut.pdf",
-#        width = 7,
-#        height = 7)
+ggsave(plot,
+       filename = "skin_microbiome_donut.pdf",
+       width = 7,
+       height = 7)
 
 library(VennDiagram)
 venn.diagram(
@@ -935,10 +933,10 @@ plot <-
     palette = c(unname(omics_color["oral_microbiome"]), "grey")
   )
 plot
-# ggsave(plot,
-#        filename = "oral_microbiome_donut.pdf",
-#        width = 7,
-#        height = 7)
+ggsave(plot,
+       filename = "oral_microbiome_donut.pdf",
+       width = 7,
+       height = 7)
 
 
 library(VennDiagram)
@@ -983,10 +981,10 @@ plot <-
     palette = c(unname(omics_color["nasal_microbiome"]), "grey")
   )
 plot
-# ggsave(plot,
-#        filename = "nasal_microbiome_donut.pdf",
-#        width = 7,
-#        height = 7)
+ggsave(plot,
+       filename = "nasal_microbiome_donut.pdf",
+       width = 7,
+       height = 7)
 
 library(VennDiagram)
 venn.diagram(

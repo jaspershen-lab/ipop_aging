@@ -8,12 +8,12 @@ library(tidyverse)
 library(tidymass)
 
 ###load("data)
-load("3-data_analysis/gut_microbiome/data_preparation/object_cross_section_loess")
+load("3-data_analysis/nasal_microbiome/data_preparation/object_cross_section_loess")
 
-dir.create("3-data_analysis/gut_microbiome/DEG/cross_section_loess/",
+dir.create("3-data_analysis/nasal_microbiome/DEG/cross_section_loess/",
            recursive = TRUE)
 
-setwd("3-data_analysis/gut_microbiome/DEG/cross_section_loess")
+setwd("3-data_analysis/nasal_microbiome/DEG/cross_section_loess")
 
 object_cross_section_loess
 
@@ -198,7 +198,7 @@ marker_each_point <-
     idx1 <- which(x$p_value < 0.05)
     
     gene1 <-
-      try(data.frame(x[idx1,],
+      try(data.frame(x[idx1, ],
                      stringsAsFactors = FALSE),
           silent = TRUE)
     
@@ -292,7 +292,7 @@ plot1 <-
   scale_x_discrete(expand = c(.1, .1)) +
   ggalluvial::geom_flow() +
   labs(x = "", y = "") +
-  scale_fill_manual(values = c("changed" = unname(omics_color["gut_microbiome"]),
+  scale_fill_manual(values = c("changed" = unname(omics_color["nasal_microbiome"]),
                                "no" = "grey")) +
   ggalluvial::geom_stratum(alpha = 1, color = "black") +
   # geom_text(stat = "stratum", size = 3) +
