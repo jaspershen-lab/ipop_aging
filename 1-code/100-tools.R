@@ -32,7 +32,6 @@ metabolite_super_class_color <-
 
 names(metabolite_super_class_color) <- metabolite_super_class
 
-
 lipid_class <- c(
   "Fatty Acyls",
   "Glycerolipids",
