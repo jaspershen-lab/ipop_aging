@@ -154,17 +154,17 @@ temp_data <-
 
 library(plyr)
 temp_20230607 <-
-temp_data %>% 
-  plyr::dlply(.variables = .(subject_id_random)) %>% 
-  purrr::map(function(x){
+  temp_data %>%
+  plyr::dlply(.variables = .(subject_id_random)) %>%
+  purrr::map(function(x) {
     number = nrow(x)
     day = range(x$collection_date)[2] -
       range(x$collection_date)[1]
     data.frame(day = as.numeric(day), number)
-  }) %>% 
-  do.call(rbind, .) %>% 
+  }) %>%
+  do.call(rbind, .) %>%
   as.data.frame()
-  
+
 range(temp_20230607$day)
 mean(temp_20230607$day)
 median(temp_20230607$day)
@@ -200,19 +200,19 @@ oral_microbiome_sample_info$class <- "oral_microbiome"
 nasal_microbiome_sample_info$class <- "nasal_microbiome"
 
 
-temp_data <- 
-list(
-  transcriptome_sample_info,
-  proteomics_sample_info,
-  metabolomics_sample_info,
-  cytokine_sample_info,
-  clinical_test_sample_info,
-  lipidomics_sample_info,
-  gut_microbiome_sample_info,
-  skin_microbiome_sample_info,
-  oral_microbiome_sample_info,
-  nasal_microbiome_sample_info
-) %>%
+temp_data <-
+  list(
+    transcriptome_sample_info,
+    proteomics_sample_info,
+    metabolomics_sample_info,
+    cytokine_sample_info,
+    clinical_test_sample_info,
+    lipidomics_sample_info,
+    gut_microbiome_sample_info,
+    skin_microbiome_sample_info,
+    oral_microbiome_sample_info,
+    nasal_microbiome_sample_info
+  ) %>%
   purrr::map(function(x) {
     x$collection_date <-
       as.character(x$collection_date)
@@ -227,8 +227,10 @@ list(
     
     x <-
       x %>%
-      dplyr::mutate(sample_id = paste(subject_id, collection_date, sep = "_"),
-                    class = x$class[1]) %>%
+      dplyr::mutate(
+        sample_id = paste(subject_id, collection_date, sep = "_"),
+        class = x$class[1]
+      ) %>%
       dplyr::select(sample_id, class) %>%
       dplyr::distinct(sample_id, .keep_all = TRUE)
     
@@ -242,30 +244,30 @@ list(
 
 temp_data <-
   temp_data %>%
-  do.call(rbind, .) %>% 
-  as.data.frame() %>% 
+  do.call(rbind, .) %>%
+  as.data.frame() %>%
   tidyr::pivot_wider(names_from = "class", values_from = "class") %>%
   dplyr::mutate(
     transcriptome = case_when(is.na(transcriptome) ~ FALSE,
                               TRUE ~ TRUE),
     proteomics = case_when(is.na(proteomics) ~ FALSE,
-                         TRUE ~ TRUE),
-    metabolomics = case_when(is.na(metabolomics) ~ FALSE,
                            TRUE ~ TRUE),
+    metabolomics = case_when(is.na(metabolomics) ~ FALSE,
+                             TRUE ~ TRUE),
     cytokine = case_when(is.na(cytokine) ~ FALSE,
                          TRUE ~ TRUE),
     clinical_test = case_when(is.na(clinical_test) ~ FALSE,
-                                     TRUE ~ TRUE),
-    lipidomics = case_when(is.na(lipidomics) ~ FALSE,
                               TRUE ~ TRUE),
+    lipidomics = case_when(is.na(lipidomics) ~ FALSE,
+                           TRUE ~ TRUE),
     gut_microbiome = case_when(is.na(gut_microbiome) ~ FALSE,
-                           TRUE ~ TRUE),
+                               TRUE ~ TRUE),
     skin_microbiome = case_when(is.na(skin_microbiome) ~ FALSE,
-                           TRUE ~ TRUE),
+                                TRUE ~ TRUE),
     oral_microbiome = case_when(is.na(oral_microbiome) ~ FALSE,
-                           TRUE ~ TRUE),
+                                TRUE ~ TRUE),
     nasal_microbiome = case_when(is.na(nasal_microbiome) ~ FALSE,
-                           TRUE ~ TRUE)
+                                 TRUE ~ TRUE)
   )
 
 library(ComplexUpset)

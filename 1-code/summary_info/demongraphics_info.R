@@ -4,6 +4,8 @@ setwd(r4projects::get_project_wd())
 rm(list = ls())
 source("1-code/100-tools.R")
 
+library(tidyverse)
+
 load("3-data_analysis/phenotype/data_preparation/phenotype_data")
 
 load("3-data_analysis/plasma_cytokine/data_preparation/object")
@@ -33,8 +35,6 @@ lipidomics_sample_info %>%
     x %>%
       pull(SSPG)
   })
-
-
 
 lipidomics_object <-
   object
@@ -556,7 +556,6 @@ temp %>%
   }) %>%
   unlist()
 
-
 plot <-
   temp %>%
   ggplot(aes(x = x, y = n)) +
@@ -566,10 +565,10 @@ plot <-
   theme_base +
   labs(x = "Age range", y = "Participant number")
 plot
-ggsave(plot,
-       filename = "iris_distribution.pdf",
-       width = 10,
-       height = 6)
+# ggsave(plot,
+#        filename = "iris_distribution.pdf",
+#        width = 10,
+#        height = 6)
 
 
 
@@ -598,7 +597,6 @@ temp %>%
 
 library(plyr)
 
-
 plot <-
   temp %>%
   ggplot(aes(x = x, y = n)) +
@@ -608,12 +606,10 @@ plot <-
   theme_base +
   labs(x = "Age range", y = "Participant number")
 plot
-ggsave(plot,
-       filename = "gender_distribution.pdf",
-       width = 10,
-       height = 6)
-
-
+# ggsave(plot,
+#        filename = "gender_distribution.pdf",
+#        width = 10,
+#        height = 6)
 
 
 
@@ -639,7 +635,6 @@ temp %>%
 
 library(plyr)
 
-
 plot <-
   temp %>%
   ggplot(aes(x = x, y = n)) +
@@ -649,10 +644,10 @@ plot <-
   theme_base +
   labs(x = "Age range", y = "Participant number")
 plot
-ggsave(plot,
-       filename = "ethnicity_distribution.pdf",
-       width = 10,
-       height = 6)
+# ggsave(plot,
+#        filename = "ethnicity_distribution.pdf",
+#        width = 10,
+#        height = 6)
 
 
 #####circos plot

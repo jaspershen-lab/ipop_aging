@@ -27,6 +27,12 @@ object <-
   activate_mass_dataset(what = "sample_info") %>%
   dplyr::filter(CL4 == "Healthy")
 
+# massdataset::export_mass_dataset(object = object, file_type = "xlsx")
+
+
+
+
+
 ###for each participant, calculate the median value
 object_cross_section <-
   massdataset::summarise_samples(object = object,

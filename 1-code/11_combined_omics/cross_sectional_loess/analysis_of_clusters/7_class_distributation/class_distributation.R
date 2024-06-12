@@ -57,10 +57,10 @@ plot <-
 
 plot
 
-ggsave(plot,
-       filename = "class_distributation.pdf",
-       width = 7,
-       height = 5)
+# ggsave(plot,
+#        filename = "class_distributation.pdf",
+#        width = 7,
+#        height = 5)
 
 
 
