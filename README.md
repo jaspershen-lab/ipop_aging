@@ -1,28 +1,22 @@
 # iPop Aging
 
-Welcome to the iPop Aging repository! This repository contains code and documentation related to the iPop Aging project. 
+Welcome to the iPop Aging repository! This repository contains code and documentation related to the iPOP Aging project. 
 
-## About iPop Aging
+## About iPOP Aging
 
-iPop Aging is a research project focused on studying the effects of aging on the human body. Our goal is to understand the molecular and cellular changes that occur during the aging process and develop interventions to promote healthy aging.
+iPop Aging is a research project focused on studying the effects of aging on the human body. Our goal is to understand the molecular nonlinear changes that occur in the human body as it ages, and help us better understand the aging process.
 
 ## Repository Structure
 
-- `src/`: This directory contains the source code for the iPop Aging project.
-- `data/`: This directory contains the datasets used in the project.
-- `docs/`: This directory contains the documentation for the project.
-
-## Getting Started
-
-To get started with the iPop Aging project, please refer to the [Getting Started Guide](docs/getting-started.md) for detailed instructions on setting up the project environment and running the code.
-
-## Contributing
-
-We welcome contributions from the community! If you would like to contribute to the iPop Aging project, please refer to our [Contribution Guidelines](docs/contributing.md) for more information.
+- `1-code/`: This directory contains the code for the project.
+- `2-data/`: This directory contains the data for the project.
+- `3-data_analysis/`: This directory contains the data analysis for the project.
+- `4-manuscript/`: This directory contains the manuscript for the project.
+- `5-summary/`: This directory contains the summary for the project.
 
 ## Contact
 
-If you have any questions or feedback, please feel free to reach out to us at [xiaotao.shen@gmail.com](xiaotao.shen@gmail.com)
+If you have any questions or feedback, please feel free to reach out to us at [xiaotao.shen@outlook.com](xiaotao.shen@outlook.com)
 
 Happy coding!
 
