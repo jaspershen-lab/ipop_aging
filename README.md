@@ -6,7 +6,7 @@ Welcome to the iPop Aging repository! This repository contains code and document
 
 iPop Aging is a research project focused on studying the effects of aging on the human body. Our goal is to understand the molecular nonlinear changes that occur in the human body as it ages, and help us better understand the aging process.
 
-![](/Figure1.jpg)
+![](Figure_1.jpg)
 
 ## Repository Structure
 
