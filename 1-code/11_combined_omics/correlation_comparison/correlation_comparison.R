@@ -62,7 +62,6 @@ clinical_test_cor_data <-
 clinical_test_cor_data_loess <-
   data.frame(cor_data_loess, class = "clinical_test")
 
-
 ###lipidomics
 load("3-data_analysis/plasma_lipidomics/correlation_with_age/cross_section/cor_data")
 load(
@@ -103,7 +102,6 @@ oral_microbiome_cor_data <-
 oral_microbiome_cor_data_loess <-
   data.frame(cor_data_loess, class = "oral_microbiome")
 
-
 ###nasal_microbiome
 load("3-data_analysis/nasal_microbiome/correlation_with_age/cross_section/cor_data")
 load(
@@ -113,7 +111,6 @@ nasal_microbiome_cor_data <-
   data.frame(cor_data, class = "nasal_microbiome")
 nasal_microbiome_cor_data_loess <-
   data.frame(cor_data_loess, class = "nasal_microbiome")
-
 
 dir.create("3-data_analysis/combined_omics/correlation_comparison",
            recursive = TRUE)
