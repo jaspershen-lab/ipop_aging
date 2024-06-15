@@ -4,7 +4,7 @@ Welcome to the iPOP Aging repository! This repository contains code and document
 
 ## About iPOP Aging Project
 
-iPop Aging is a research project focused on studying the effects of aging on the human body. Our goal is to understand the molecular nonlinear changes that occur in the human body as it ages, and help us better understand the aging process.
+iPOP Aging is a research project focused on studying the effects of aging on the human body. Our goal is to understand the molecular nonlinear changes that occur in the human body as it ages, and help us better understand the aging process.
 
 ![](Figure_1.jpg)
 
@@ -18,5 +18,5 @@ iPop Aging is a research project focused on studying the effects of aging on the
 
 ## Contact
 
-If you have any questions or feedback, please feel free to reach out to us at [xiaotao.shen@outlook.com](xiaotao.shen@outlook.com)
+If you have any questions or feedback, please feel free to reach out to us at [xiaotao.shen@outlook.com](xiaotao.shen@outlook.com) and [mpsnyder@stanford.edu](mpsnyder@stanford.edu).
 
