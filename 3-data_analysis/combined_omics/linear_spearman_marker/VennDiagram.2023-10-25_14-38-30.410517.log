@@ -1,0 +1,13 @@
+INFO [2023-10-25 14:38:30] $x
+INFO [2023-10-25 14:38:30] list(Linear = proteomics_variable_info$variable_id[proteomics_variable_info$cor_p < 
+INFO [2023-10-25 14:38:30]     0.05], Changed = proteomics_all_marker_name)
+INFO [2023-10-25 14:38:30] 
+INFO [2023-10-25 14:38:30] $category.names
+INFO [2023-10-25 14:38:30] c("Linear", "Changed")
+INFO [2023-10-25 14:38:30] 
+INFO [2023-10-25 14:38:30] $filename
+INFO [2023-10-25 14:38:30] NULL
+INFO [2023-10-25 14:38:30] 
+INFO [2023-10-25 14:38:30] $fill
+INFO [2023-10-25 14:38:30] c("red", "darkblue")
+INFO [2023-10-25 14:38:30] 

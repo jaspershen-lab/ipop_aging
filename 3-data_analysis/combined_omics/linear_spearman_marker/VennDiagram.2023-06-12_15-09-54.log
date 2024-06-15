@@ -1,0 +1,13 @@
+INFO [2023-06-12 15:09:54] $x
+INFO [2023-06-12 15:09:54] list(Linear = oral_microbiome_variable_info$variable_id[oral_microbiome_variable_info$cor_p < 
+INFO [2023-06-12 15:09:54]     0.05], Changed = oral_microbiome_all_marker_name)
+INFO [2023-06-12 15:09:54] 
+INFO [2023-06-12 15:09:54] $category.names
+INFO [2023-06-12 15:09:54] c("Linear", "Changed")
+INFO [2023-06-12 15:09:54] 
+INFO [2023-06-12 15:09:54] $filename
+INFO [2023-06-12 15:09:54] NULL
+INFO [2023-06-12 15:09:54] 
+INFO [2023-06-12 15:09:54] $fill
+INFO [2023-06-12 15:09:54] c("red", "darkblue")
+INFO [2023-06-12 15:09:54] 

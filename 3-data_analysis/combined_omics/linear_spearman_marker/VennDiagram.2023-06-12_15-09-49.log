@@ -1,0 +1,13 @@
+INFO [2023-06-12 15:09:49] $x
+INFO [2023-06-12 15:09:49] list(Linear = skin_microbiome_variable_info$variable_id[skin_microbiome_variable_info$cor_p < 
+INFO [2023-06-12 15:09:49]     0.05], Changed = skin_microbiome_all_marker_name)
+INFO [2023-06-12 15:09:49] 
+INFO [2023-06-12 15:09:49] $category.names
+INFO [2023-06-12 15:09:49] c("Linear", "Changed")
+INFO [2023-06-12 15:09:49] 
+INFO [2023-06-12 15:09:49] $filename
+INFO [2023-06-12 15:09:49] NULL
+INFO [2023-06-12 15:09:49] 
+INFO [2023-06-12 15:09:49] $fill
+INFO [2023-06-12 15:09:49] c("red", "darkblue")
+INFO [2023-06-12 15:09:49] 

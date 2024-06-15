@@ -1,0 +1,2 @@
+"pathway_id","pathway_name","describtion","pathway_class","p_value","p_value_adjust","all_id","all_number","mapped_id","mapped_number","mapped_percentage","class"
+"hsa00232","Caffeine metabolism","NA","Metabolism; Biosynthesis of other secondary metabolites",0.000174941254908374,0.0334137796874995,"C00048;C00385;C01762;C07130;C07480;C07481;C13747;C16352;C16353;C16355;C16356;C16357;C16358;C16359;C16360;C16361;C16362;C16363;C16364;C16365;C16366;C21144",22,"C16358;C16366;C16356",3,13.6363636363636,"KEGG"

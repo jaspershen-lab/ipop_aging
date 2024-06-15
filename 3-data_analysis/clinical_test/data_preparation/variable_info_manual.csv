@@ -1,0 +1,52 @@
+variable_id,test_name,Decsription,Category
+A1C,Hemoglobin A1C,"Hemoglobin A1C, measure of blood glucose over previous 90 days",Metabolic
+AG,albumin/globulin (A/G) ratio,total protein and albumin/globulin (A/G) ratio,"As part of a general health checkup, to determine your nutritional status or to screen for and help diagnose certain liver and kidney disorders as well as other diseases"
+ALB,Serum Albumin,"Albumin, most abundant blood protein",Liver function
+ALCRU,"aluminum/creatinine ratio random, urine","aluminum/creatinine ratio random, urine",Diabetes
+ALKP,Alkaline phosphatase,"Alkaline phosphatase, bile duct and bone enzyme released by damage",Liver function
+ALT,Alanine aminotransferase,"ALanine aminoTransferase, liver enzyme released by damage",Liver function
+AST,Aspartate aminotransferase,"ASpartate aminoTransferase, liver enzyme released by damage",Liver function
+BASO,basophil,basophil in percentage,
+BASOAB,absolute basophil count,"Basophils, white blood cell type (absolute number)",Differential
+BUN,Blood Urea Nitrogen,Blood Urea Nitrogen Protein byproduct excreted by kidneys,Renal function
+CA,Calcium,"Calcium, blood electrolyte",Electrolytes
+CHOL,Total cholesterol,Total cholesterol,Lipid panel
+CHOLHDL,CHOL:HDL ratio,,
+CL,Chloride,"Chloride, blood electrolye",Electrolytes
+CO2,carbon dioxide,carbon dioxide,
+CR,chromium,,
+EGFR,estimated glomerular filtration rate,,Liver function
+EOS,eosinophil in percentage,eosinophil in percentage,
+EOSAB,absolute eosinophil count,,
+GLOB,Globulin,,
+GLU,Serum/plasma glucose,Blood glucose,Metabolic
+HCT,Hematocrit,"Hematocrit, measure of blood oxygen carrying capacity",Complete blood count
+HDL,High density lipoprotein,High density lipoprotein cholesterol,Lipid panel
+HGB,Hemoglobin,"Hemoglobin, oxygen carrying protein",Complete blood count
+HSCRP,High sensitivity C-Reactive Protein,,
+IGM,Immunoglobulin M,,
+INSF,"insulin, fasting",,
+INSU,Insulin,,
+K,Potassium,"Potassium, blood electrolyte",Electrolytes
+LDL,Low density lipoprotein,Low density lipoprotein cholesterol,Lipid panel
+LDLHDL,LDL:HDL ratio,,
+LYM,Lymphocytes,,
+LYMAB,Absolute Lymphocytes count,,
+MCH,Mean corpuscular hemoglobin,"Mean corpuscular hemoglobin, used to differentiate causes of anemia",Red cell indices
+MCHC,Mean corpuscular hemoglobin concentration,"Mean corpuscular hemoglobin concentration, used to differentiate causes of anemia",Red cell indices
+MCV,Mean corupuscular volume,"Mean corupuscular volume, used to differentiate causes of anemia",Red cell indices
+MONO,Monocyte,,
+MONOAB,Absolute Monocyte count,"Monocytes, white blood cell type (absolute count)",Differential
+NA.,Sodium,"Sodium, blood electrolyte",Electrolytes
+NEUT,Neutrophil,,
+NEUTAB,Absolute Neutrophil count,,
+NHDL,non-HDL,,
+PLT,Platelet count,"Platelet count, clot forming measure",Complete blood count
+RBC,Red Blood Cell count,"Red Blood Cell count, measure of blood oxygen carrying capacity",Complete blood count
+RDW,Red cell Distribution Width,"Red cell Distribution Width, measure of variability in MCV, used to differentiate causes of anemia",Red cell indices
+TBIL,Total Bilirubin,,
+TGL,Triglycerides,,
+TP,Total protein,,
+UALB,Urine Albumin,,
+UALBCR,average urinary albumin/creatinine (Cr) ratio,,
+WBC,White Blood Cell count,White Blood Cell count,Complete blood count

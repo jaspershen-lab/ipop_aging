@@ -1,0 +1,13 @@
+INFO [2023-06-12 15:09:31] $x
+INFO [2023-06-12 15:09:31] list(Linear = metabolomics_variable_info$variable_id[metabolomics_variable_info$cor_p < 
+INFO [2023-06-12 15:09:31]     0.05], Changed = metabolomics_all_marker_name)
+INFO [2023-06-12 15:09:31] 
+INFO [2023-06-12 15:09:31] $category.names
+INFO [2023-06-12 15:09:31] c("Linear", "Changed")
+INFO [2023-06-12 15:09:31] 
+INFO [2023-06-12 15:09:31] $filename
+INFO [2023-06-12 15:09:31] NULL
+INFO [2023-06-12 15:09:31] 
+INFO [2023-06-12 15:09:31] $fill
+INFO [2023-06-12 15:09:31] c("red", "darkblue")
+INFO [2023-06-12 15:09:31] 

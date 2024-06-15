@@ -1,0 +1,13 @@
+INFO [2023-10-25 16:17:19] $x
+INFO [2023-10-25 16:17:19] list(Linear = transcriptome_variable_info$variable_id[transcriptome_variable_info$cor_p < 
+INFO [2023-10-25 16:17:19]     0.05], Changed = transcriptome_all_marker_name)
+INFO [2023-10-25 16:17:19] 
+INFO [2023-10-25 16:17:19] $category.names
+INFO [2023-10-25 16:17:19] c("Linear", "Changed")
+INFO [2023-10-25 16:17:19] 
+INFO [2023-10-25 16:17:19] $filename
+INFO [2023-10-25 16:17:19] NULL
+INFO [2023-10-25 16:17:19] 
+INFO [2023-10-25 16:17:19] $fill
+INFO [2023-10-25 16:17:19] c("red", "darkblue")
+INFO [2023-10-25 16:17:19] 

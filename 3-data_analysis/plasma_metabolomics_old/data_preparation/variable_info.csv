@@ -1,0 +1,170 @@
+"variable_id","Mass","Metabolite","KEGG","HMDB","CAS","ChEBI","ppm","Mode","med","Ions","MSMS","Used.for.Quant","Super.pathway","Sub.pathway","true_name","mean_int"
+"pHILIC_298.1139_4.7","298.1139_4.7","1-Methylguanosine","C04545","HMDB01563","2140-65-0","HMDB","-2.35139493013028|-2.35139493013028|-2.35139493013028|-2.35139493013028|-2.35139493013028|-0.0876856932803102","pHILIC",60000,"[M+H]+","YES","Y","Nucleotide","""Pyrimidine Metabolism, Uracil containing""","1-Methylguanosine",56831.8762373089
+"pHILIC_170.0923_8.5","170.0923_8.5","1-Methylhistidine","C01152","HMDB00001","","","-0.630517121","pHILIC",2e+06,"[M+H]+","YES","Y","Amino Acid","Histidine Metabolism","1-Methylhistidine",2105648.82297421
+"nHILIC_181.0367_6.8","181.0367_6.8","1-Methyluric acid","C16359","HMDB03099","708-79-2","HMDB","-0.055360249","nHILIC",9e+05,"[M-H]-","YES","Y","Xenobiotics","Xanthine Metabolism","1-Methyluric acid",1132694.65653544
+"nHILIC_204.9811_1.1","204.9811_1.1","1,2,3-benzenetriol sulfate","","","","","-0.624375025449228|-0.624375025449228|-0.624375025449228|-1.95834347547098","nHILIC",3e+05,"[M-H]-","YES","Y","Xenobiotics","Chemical","1,2,3-benzenetriol sulfate",1686972.17354645
+"nHILIC_481.244_5.2","481.244_5.2","11-beta-Hydroxyandrosterone-3-glucuronide","","HMDB10351","","HMDB","-0.627917462","nHILIC",70000,"[M-H]-","YES","Y","Lipid","Androgenic Steroids","11-beta-Hydroxyandrosterone-3-glucuronide",74266.6266585525
+"nRPLC_383.1535_7.6","383.1535_7.6","16a-hydroxy DHEA 3-sulfate","","","","","0.314144509983391|0.728163869219615","nRPLC",7e+05,"[M-H]-","YES","Y","Lipid","Androgenic Steroids","16a-hydroxy DHEA 3-sulfate",815468.043891356
+"pHILIC_104.0705_8.1","104.0705_8.1","2-Aminobutyrate","C02261","HMDB00650","","","-1.053110896","pHILIC",2e+05,"[M+H]+","YES","Y","Amino Acid","Glutathione Metabolism","2-Aminobutyrate",184792.635611111
+"nHILIC_188.0023_1.6","188.0023_1.6","2-Aminophenol sulfate","","HMDB61116","","","0.008428144","nHILIC",8e+05,"[M-H]-","YES","Y","Xenobiotics","Chemical","2-Aminophenol sulfate",1302559.29399942
+"nRPLC_151.04_2.3","151.04_2.3","2-Hydroxyphenylacetate","C05852","HMDB00669","","","-0.421724085","nRPLC",20000,"[M-H]-","YES","Y","Amino Acid","Tyrosine Metabolism","2-Hydroxyphenylacetate",89043.6564576962
+"pRPLC_100.0756_1.2","100.0756_1.2","2-Piperidinone","","HMDB11749","","","-0.94798216","pRPLC",1e+05,"[M+H]+","YES","Y","Xenobiotics","Food Component/Plant","2-Piperidinone",234227.215327217
+"nHILIC_133.0506_2.3","133.0506_2.3","2,3-Dihydroxyvaleric acid","C04039","HMDB00421","26386-47-0","HMDB","-0.214892254","nHILIC",70000,"[M-H]-","YES","Y","Cofactors and Vitamins","Pantothenate and CoA Metabolism","2,3-Dihydroxyvaleric acid",362197.295723164
+"nRPLC_149.0607_4.6","149.0607_4.6","3-Phenylpropionate (hydrocinnamate)","C05629","HMDB00764","","","-0.66345932","nRPLC",70000,"[M-H]-","YES","Y","Xenobiotics","Benzoate Metabolism","3-Phenylpropionate (hydrocinnamate)",89773.7479554638
+"nHILIC_179.0348_2.2","179.0348_2.2","4-Hydroxyphenylpyruvic acid","C01179","HMDB00707","156-39-8","HMDB","-0.99279013","nHILIC",50000,"[M-H]-","YES","Y","Amino Acid","Tyrosine Metabolism","4-Hydroxyphenylpyruvic acid",69155.0101814169
+"nRPLC_203.002_1.9","203.002_1.9","4-Methylcatechol sulfate","","","","","0.176188064","nRPLC",3e+05,"[M-H]-","YES","Y","Xenobiotics","Benzoate Metabolism","4-Methylcatechol sulfate",390287.42294474
+"nHILIC_197.0679_1.4","197.0679_1.4","5-Acetylamino-6-amino-3-methyluracil","C16366","HMDB04400","","","-0.556384702","nHILIC",2e+06,"[M-H]-","YES","Y","Xenobiotics","Xanthine Metabolism","5-Acetylamino-6-amino-3-methyluracil",2311093.17950897
+"nHILIC_128.0352_7.6","128.0352_7.6","5-oxoproline","C01879","HMDB00267","","","-0.929926331","nHILIC",6e+06,"[M-H]-","YES","Y","Amino Acid","Glutathione Metabolism","5-oxoproline",6764532.29940877
+"nRPLC_371.1881_9.5","371.1881_9.5","5alpha-Androstan-3alpha,17alpha-diol monosulfate","","","","","4.58359800172553|4.58359800172553|4.58359800172553|4.58359800172553|4.58359800172553|4.58359800172553|0.990313205912641|0.990313205912641|4.58359800172553|4.58359800172553|4.58359800172553","nRPLC",1e+05,"[M-H]-","YES","Y","Lipid","Androgenic Steroids","5alpha-Androstan-3alpha,17alpha-diol monosulfate",267847.509900224
+"nRPLC_467.2636_8.4","467.2636_8.4","5alpha-Androstan-3alpha,17beta-diol 17-glucuronide","","","","","-3.071418834","nRPLC",20000,"[M-H]-","YES","Y","Lipid","Androgenic Steroids","5alpha-Androstan-3alpha,17beta-diol 17-glucuronide",24570.0742396534
+"nRPLC_429.3008_10.3","429.3008_10.3","7-alpha-hydroxy-3-oxo-4-cholestenoate (7-Hoca)","C17337","HMDB12458","","","-0.534110352","nRPLC",4e+05,"[M-H]-","YES","Y","Lipid","Sterol","7-alpha-hydroxy-3-oxo-4-cholestenoate (7-Hoca)",413741.692823932
+"pHILIC_269.1239_8.3","269.1239_8.3","Acetylcarnosine","","HMDB12881","56353-15-2","HMDB","-1.995474954","pHILIC",2e+05,"[M+H]+","YES","Y","Amino Acid","Histidine Metabolism","Acetylcarnosine",264298.064385321
+"pHILIC_203.1388_8.9","203.1388_8.9","Ala-Leu or Leu-Ala","","","","","-1.100530981","pHILIC",60000,"[M+H]+","YES","Y","Peptide","Dipeptide","Ala-Leu or Leu-Ala",70483.9196656004
+"pHILIC_178.0532_7.5","178.0532_7.5","Alliin","C08265","HMDB33592","","","-0.248031697","pHILIC",60000,"[M+H]+","YES","Y","Xenobiotics","Food Component/Plant","Alliin",115227.594807238
+"pRPLC_265.1184_2.6","265.1184_2.6","Alpha-N-Phenylacetyl-L-glutamine","C04148","HMDB06344","","HMDB","0.427812354","pRPLC",8e+05,"[M+H]+","YES","Y","Peptide","Acetylated Peptides","Alpha-N-Phenylacetyl-L-glutamine",898568.987267584
+"nHILIC_224.0617_4.8","224.0617_4.8","Androstenediol (3beta,17beta) disulfate","C04295","HMDB03818","","","4.106181136","nHILIC",2e+06,"[M-H]2-","YES","Y","Lipid","Androgenic Steroids","Androstenediol (3beta,17beta) disulfate",2293139.04003664
+"nRPLC_465.2489_8.6","465.2489_8.6","Androsterone glucuronide","C11135","HMDB02829","1852-43-3","HMDB","-1.047046712","nRPLC",2e+05,"[M-H]-","YES","Y","Lipid","Androgenic Steroids","Androsterone glucuronide",198237.135747197
+"nRPLC_369.1741_9.5","369.1741_9.5","Androsterone sulfate","","HMDB02759","2479-86-9","HMDB","-0.0398723458189992|-0.0398723458189992|-0.0398723458189992|0.510012145841384","nRPLC",6e+06,"[M-H]-","YES","Y","Lipid","Androgenic Steroids","Androsterone sulfate",7676563.60608563
+"nHILIC_151.0611_5.4","151.0611_5.4","Arabitol | Xylitol","C01904","","","","-0.614815519","nHILIC",1e+05,"[M-H]-","YES","Y","Carbohydrate","Pentose Metabolism","Arabitol | Xylitol",146380.446256473
+"nHILIC_165.0405_8.5","165.0405_8.5","Arabonate | Xylonate","","","","","0.252626081586609|0.252626081586609|-4.97718186883818|0.252626081586609|0.252626081586609|0.252626081586609","nHILIC",5e+05,"[M-H]-","YES","Y","Carbohydrate","Pentose Metabolism","Arabonate | Xylonate",591701.938217125
+"nHILIC_247.057_11.8","247.057_11.8","Asp-Asp","","","","","-0.688321592","nHILIC",70000,"[M-H]-","YES","Y","Peptide","Dipeptide","Asp-Asp",77586.0307351172
+"nHILIC_261.0725_10.7","261.0725_10.7","Asp-Glu or Glu-Asp","","","","","-1.224100539","nHILIC",2e+06,"[M-H]-","YES","Y","Peptide","Dipeptide","Asp-Glu or Glu-Asp",1924130.56707819
+"pHILIC_160.0967_7.5","160.0967_7.5","Betonicine","C08269","HMDB29412","","","-0.774954111","pHILIC",3e+05,"[M+H]+","YES","Y","Xenobiotics","Food Component/Plant","Betonicine",877702.942247655
+"pHILIC_585.2694_4.9","585.2694_4.9","Bilirubin","C00486","HMDB00054","","","-2.336115852","pHILIC",9e+05,"[M+H]+","YES","Y","Cofactors and Vitamins","Hemoglobin and Porphyrin Metabolism","Bilirubin",1990805.44020459
+"pHILIC_583.2539_5.3","583.2539_5.3","Biliverdin","C00500","HMDB01008","","","-2.086469819","pHILIC",1e+06,"[M+H]+","YES","Y","Cofactors and Vitamins","Hemoglobin and Porphyrin Metabolism","Biliverdin",1195287.18205169
+"nHILIC_87.045_4.2","87.045_4.2","Butyric acid|Isobutyric acid","C00246|C02632","HMDB00039|HMDB01873","107-92-6|79-31-2","HMDB","-1.697854956","nHILIC",1e+05,"[M-H]-","YES","Y","Energy","Butanoate metabolism","Butyric acid|Isobutyric acid",121290.778460754
+"nHILIC_188.9862_0.9","188.9862_0.9","Catechol sulfate","","HMDB59724","","HMDB","-0.599978483","nHILIC",6e+05,"[M-H]-","YES","Y","Xenobiotics","Benzoate Metabolism","Catechol sulfate",5265869.67064882
+"nRPLC_391.2856_9.8","391.2856_9.8","Chenodeoxycholic Acid","","HMDB0000518","","HMDB","0.561396883","nRPLC",5e+05,"[M-H]-","YES","Y","Lipid","Primary Bile Acid Metabolism","Chenodeoxycholic Acid",653486.691555401
+"nHILIC_512.2684_5.7","512.2684_5.7","Chenodeoxycholic acid 3-sulfate","C11301","HMDB02639","15324-64-8","HMDB","-0.669084886","nHILIC",5e+05,"[M-H]-","YES","Y","Lipid","Secondary Bile Acid Metabolism","Chenodeoxycholic acid 3-sulfate",566003.839069317
+"nRPLC_448.3069_9.4","448.3069_9.4","Chenodeoxycholic acid glycine conjugate","C05466","HMDB00637","640-79-9","HMDB","0.12576723","nRPLC",2e+06,"[M-H]-","YES","Y","Lipid","Primary Bile Acid Metabolism","Chenodeoxycholic acid glycine conjugate",3351197.0866318
+"nRPLC_407.2804_9.2","407.2804_9.2","Cholic Acid","","HMDB0000619","","HMDB","0.258665655","nRPLC",90000,"[M-H]-","YES","Y","Lipid","Primary Bile Acid Metabolism","Cholic Acid",368133.99660659
+"nRPLC_204.0666_4.3","204.0666_4.3","Cinnamoylglycine","","HMDB11621","16534-24-0","HMDB","-0.064479201","nRPLC",30000,"[M-H]-","YES","Y","Xenobiotics","Food Component/Plant","Cinnamoylglycine",37753.5388229867
+"pRPLC_169.0971_1.6","169.0971_1.6","Cyclo(ala-pro)","","","","","-0.47593602","pRPLC",40000,"[M+H]+","YES","Y","Peptide","Dipeptide","Cyclo(ala-pro)",44332.49660316
+"pHILIC_179.0484_7.4","179.0484_7.4","Cys-Gly or Gly-Cys","","","","","-0.52171094","pHILIC",1e+05,"[M+H]+","YES","Y","Peptide","Dipeptide","Cys-Gly or Gly-Cys",141483.331294597
+"nHILIC_217.0651_5","217.0651_5","Cys-Pro or Pro-Cys","","","","","-0.609953447563239|-0.609953447563239|3.47380534854027","nHILIC",2e+06,"[M-H]-","YES","Y","Peptide","Dipeptide","Cys-Pro or Pro-Cys",1815250.46724771
+"nHILIC_425.0806_12.4","425.0806_12.4","Cysteineglutathione disulfide","","HMDB00656","13081-14-6","HMDB","-0.058861097","nHILIC",2e+05,"[M-H]-","YES","Y","Amino Acid","Glutathione Metabolism","Cysteineglutathione disulfide",216241.172901529
+"nRPLC_367.1585_8.9","367.1585_8.9","Dehydroisoandrosterone sulfate (DHEA-S)","C04555","HMDB01032","","","0.095891584","nRPLC",1e+07,"[M-H]-","YES","Y","Lipid","Androgenic Steroids","Dehydroisoandrosterone sulfate (DHEA-S)",15133287.4245668
+"pRPLC_277.0384_5.1","277.0384_5.1","Dihydroferulic acid","","","","","2.70466605368801|3.44210826679891","pRPLC",30000,"[M-H]-","YES","Y","Xenobiotics","Food Component/Plant","Dihydroferulic acid",41240.1928245056
+"nRPLC_415.3217_11.4","415.3217_11.4","Dihydroxyvitamin D3","","HMDB00430","","HMDB","-0.048038933","nRPLC",3e+05,"[M-H]-","YES","Y","Cofactors and Vitamins","Vitamin D Metabolism","Dihydroxyvitamin D3",352330.728501529
+"nHILIC_121.0505_3.5","121.0505_3.5","Erythritol|D-Threitol","C00503|C16884","HMDB02994|HMDB04136","149-32-6|2418-52-2","HMDB","-1.05530348","nHILIC",1e+05,"[M-H]-","YES","Y","Xenobiotics","Food Component/Plant","Erythritol|D-Threitol",153641.057403062
+"nHILIC_238.0929_7.3","238.0929_7.3","ethyl glucuronide","","HMDB10325","","","-1.346310153","nHILIC",3e+05,"[M-H]-","YES","Y","Xenobiotics","Chemical","ethyl glucuronide",327738.502754612
+"nHILIC_131.0349_5.1","131.0349_5.1","Ethylmalonate","","HMDB00622","","","-0.596354892","nHILIC",2e+05,"[M-H]-","YES","Y","Amino Acid","""Leucine, Isoleucine and Valine Metabolism""","Ethylmalonate",219116.61201105
+"nRPLC_243.0331_5.4","243.0331_5.4","eugenol sulfate","","","","","-0.672773907","nRPLC",20000,"[M-H]-","YES","Y","Xenobiotics","Food Component/Plant","eugenol sulfate",42646.3861505698
+"pHILIC_309.1649_15.6","309.1649_15.6","Fructoselysine","C16488","","","","-2.372591014","pHILIC",3e+05,"[M+H]+","YES","Y","Carbohydrate","Pentose Metabolism","Fructoselysine",352298.913520897
+"nRPLC_263.1289_6.8","263.1289_6.8","gamma-CEHC","","HMDB01931","","","0.079019845","nRPLC",10000,"[M-H]-","YES","Y","Cofactors and Vitamins","Tocopherol Metabolism","gamma-CEHC",50145.7769269185
+"nRPLC_283.1088_9.6","283.1088_9.6","gamma-glutamylhistidine","","","","","-0.043601897","nRPLC",2e+05,"[M-H]-","YES","Y","Peptide","Gamma-glutamyl Amino Acid","gamma-glutamylhistidine",191992.89332212
+"pRPLC_295.1292_1.3","295.1292_1.3","gamma-glutamylphenylalanine","","HMDB00594","","","1.184216396","pRPLC",40000,"[M+H]+","YES","Y","Peptide","Gamma-glutamyl Amino Acid","gamma-glutamylphenylalanine",37003.5866857085
+"pHILIC_249.1078_10.4","249.1078_10.4","gamma-glutamylthreonine","","HMDB29159","","","-1.274701077","pHILIC",3e+06,"[M+H]+","YES","Y","Peptide","Gamma-glutamyl Amino Acid","gamma-glutamylthreonine",3032042.32068593
+"nRPLC_153.0193_2.1","153.0193_2.1","Gentisic acid","C00628","HMDB00152","490-79-9","HMDB","-0.186201628","nRPLC",50000,"[M-H]-","YES","Y","Amino Acid","Tyrosine Metabolism","Gentisic acid",69429.248521998
+"nHILIC_202.1197_13.3","202.1197_13.3","Gly-Lys or Lys-Gly","","","","","-0.056245606","nHILIC",90000,"[M-H]-","YES","Y","Peptide","Dipeptide","Gly-Lys or Lys-Gly",90687.1963537207
+"nRPLC_464.3015_8.8","464.3015_8.8","Glycocholic acid","C01921","HMDB00138","475-31-0","HMDB","-0.554713367","nRPLC",2e+05,"[M-H]-","YES","Y","Lipid","Primary Bile Acid Metabolism","Glycocholic acid",654751.648961264
+"pHILIC_189.1345_14.4","189.1345_14.4","Homoarginine","C01924","HMDB00670","","","-0.562257817","pHILIC",1e+06,"[M+H]+","YES","Y","Amino Acid","Urea cycle; Arginine and Proline Metabolism","Homoarginine",1298649.91589119
+"pHILIC_158.1174_6.2","158.1174_6.2","Homostachydrine","C08283","HMDB33433","","","-1.01030411","pHILIC",5e+05,"[M+H]+","YES","Y","Xenobiotics","Food Component/Plant","Homostachydrine",671625.393816514
+"nHILIC_103.04_4.6","103.04_4.6","Hydroxybutyric acid","","","","","-0.616277523","nHILIC",8e+06,"[M-H]-","YES","Y","Amino Acid","Glutathione Metabolism","Hydroxybutyric acid",8691325.38358818
+"nHILIC_194.0458_4.6","194.0458_4.6","Hydroxyhippurate","","","","","-0.398768376","nHILIC",70000,"[M-H]-","YES","Y","Xenobiotics","Benzoate Metabolism","Hydroxyhippurate",1233088.00717227
+"pHILIC_157.0607_8.3","157.0607_8.3","Imidazolelactic acid","C05132","HMDB02320","876-19-7","HMDB","-0.462226333","pHILIC",1e+05,"[M+H]+","YES","Y","Amino Acid","Histidine Metabolism","Imidazolelactic acid",114795.189091805
+"nHILIC_132.0302_8.3","132.0302_8.3","Iminodiacetate (IDA)","C19911","HMDB11753","","","-0.208339785","nHILIC",1e+05,"[M-H]-","YES","Y","Xenobiotics","Chemical","Iminodiacetate (IDA)",100900.516711519
+"nHILIC_302.1148_6.5","302.1148_6.5","Indoleacetyl glutamine","","HMDB13240","4/3/99","HMDB","0.573871095107597|-3.83822583965149|0.573871095107597","nHILIC",70000,"[M-H]-","YES","Y","Amino Acid","Tryptophan Metabolism","Indoleacetyl glutamine",94788.7329473394
+"pHILIC_146.0811_7.5","146.0811_7.5","Isobutyrylglycine","","HMDB00730","","","-0.504729248","pHILIC",5e+05,"[M+H]+","YES","Y","Amino Acid","""Leucine, Isoleucine and Valine Metabolism""","Isobutyrylglycine",1400664.59149643
+"nRPLC_117.0557_0.6","117.0557_0.6","L-_-Hydroxyisovaleric acid","","HMDB00407","","","-0.120156208","nRPLC",7e+05,"[M-H]-","YES","Y","Amino Acid","""Leucine, Isoleucine and Valine Metabolism""","L-_-Hydroxyisovaleric acid",785823.79617737
+"nHILIC_274.1407_12.3","274.1407_12.3","L-a-glutamyl-L-Lysine","C04700","HMDB04207","5891-53-2","HMDB","-0.511713733","nHILIC",3e+05,"[M-H]-","YES","Y","Peptide","Dipeptide","L-a-glutamyl-L-Lysine",291868.626570846
+"nHILIC_235.0723_6.5","235.0723_6.5","L-Formylkynurenine","C02700","HMDB60485","","HMDB","-0.537454362","nHILIC",90000,"[M-H]-","YES","Y","Amino Acid","Tryptophan Metabolism","L-Formylkynurenine",140995.630104424
+"nRPLC_511.3039_10.3","511.3039_10.3","LysoPG(18:0)","","","","","-0.467836755","nRPLC",40000,"[M-H]-","YES","Y","Lipid","Phospholipid Metabolism","LysoPG(18:0)",39794.10362895
+"nRPLC_230.9968_4.1","230.9968_4.1","methyl-4-hydroxybenzoate sulfate","","","","","-0.339123346","nRPLC",30000,"[M-H]-","YES","Y","Xenobiotics","Benzoate Metabolism","methyl-4-hydroxybenzoate sulfate",91039.7637821203
+"nRPLC_299.2228_9.3","299.2228_9.3","MG(14:1)","","HMDB11531","","HMDB","0.068240997","nRPLC",20000,"[M-H]-","YES","Y","Lipid","Monoacylglycerol","MG(14:1)",23451.1679308869
+"nRPLC_315.2541_9.4","315.2541_9.4","MG(15:0)","","HMDB11532","","HMDB","0.06437713","nRPLC",50000,"[M-H]-","YES","Y","Lipid","Monoacylglycerol","MG(15:0)",58933.1675015291
+"nRPLC_327.2538_10.5","327.2538_10.5","MG(16:1)","","HMDB11534","","HMDB","-0.851882898","nRPLC",20000,"[M-H]-","YES","Y","Lipid","Monoacylglycerol","MG(16:1)",19787.7690314985
+"pRPLC_359.3154_11","359.3154_11","MG(18:0)","","HMDB11131","","HMDB","-0.529800999","pRPLC",2e+06,"[M+H]+","YES","Y","Lipid","Monoacylglycerol","MG(18:0)",2802861.76869317
+"nRPLC_355.2852_11","355.2852_11","MG(18:1)","","HMDB11536","","HMDB","-0.504551766","nRPLC",20000,"[M-H]-","YES","Y","Lipid","Monoacylglycerol","MG(18:1)",23992.936959735
+"nRPLC_351.254_10.3","351.254_10.3","MG(18:3)","","HMDB11539","","HMDB","-0.226082185","nRPLC",60000,"[M-H]-","YES","Y","Lipid","Monoacylglycerol","MG(18:3)",65304.7963167176
+"nRPLC_385.332_10.8","385.332_10.8","MG(20:0)","","HMDB11542","","HMDB","-0.854067958","nRPLC",10000,"[M-H]-","YES","Y","Lipid","Monoacylglycerol","MG(20:0)",18392.7279658512
+"nRPLC_377.2696_10.5","377.2696_10.5","MG(20:4)","","HMDB04666","53847-30-6","HMDB","-0.342881119","nRPLC",60000,"[M-H]-","YES","Y","Lipid","Monoacylglycerol","MG(20:4)",69317.8171140673
+"nRPLC_375.254_10.2","375.254_10.2","MG(20:5)","","HMDB11550","","HMDB","-0.211661429","nRPLC",30000,"[M-H]-","YES","Y","Lipid","Monoacylglycerol","MG(20:5)",31417.6743969735
+"nRPLC_409.3322_11.2","409.3322_11.2","MG(22:2)","","HMDB11553","","HMDB","-0.316713371","nRPLC",20000,"[M-H]-","YES","Y","Lipid","Monoacylglycerol","MG(22:2)",23693.7044724771
+"nRPLC_441.3947_11.3","441.3947_11.3","MG(24:0)","","HMDB11558","","HMDB","-0.520377418","nRPLC",1e+05,"[M-H]-","YES","Y","Lipid","Monoacylglycerol","MG(24:0)",122331.523007717
+"nRPLC_439.3792_11.1","439.3792_11.1","MG(24:1)","","HMDB11559","","HMDB","-0.182003771","nRPLC",40000,"[M-H]-","YES","Y","Lipid","Monoacylglycerol","MG(24:1)",48871.7068565036
+"pHILIC_280.1384_8","280.1384_8","N-(1-Deoxy-1-fructosyl)valine","","HMDB37844","","HMDB","-2.443407242","pHILIC",90000,"[M+H]+","YES","Y","Amino Acid","""Leucine, Isoleucine and Valine Metabolism""","N-(1-Deoxy-1-fructosyl)valine",122188.384102992
+"pHILIC_212.1026_7.4","212.1026_7.4","N-acetyl-1-methylhistidine","","","","","-1.758906829","pHILIC",1e+05,"[M+H]+","YES","Y","Amino Acid","Histidine Metabolism","N-acetyl-1-methylhistidine",178249.095723038
+"nHILIC_160.0615_7.2","160.0615_7.2","N-acetylthreonine","","","","","-0.124170556","nHILIC",60000,"[M-H]-","YES","Y","Amino Acid","""Glycine, Serine and Threonine Metabolism""","N-acetylthreonine",90863.7902522834
+"pHILIC_130.0863_6.6","130.0863_6.6","N-methylproline","","","","","0.320726017","pHILIC",2e+06,"[M+H]+","YES","Y","Amino Acid","Urea cycle; Arginine and Proline Metabolism","N-methylproline",1724519.39713048
+"pRPLC_153.0658_1.2","153.0658_1.2","N1-Methyl-2-pyridone-5-carboxamide","C05842","HMDB04193","","","-0.378209652","pRPLC",4e+05,"[M+H]+","YES","Y","Cofactors and Vitamins","Nicotinate and Nicotinamide Metabolism","N1-Methyl-2-pyridone-5-carboxamide",478368.264341488
+"pHILIC_282.119_6.7","282.119_6.7","N1-methyladenosine","C02494","HMDB03331","","","-2.43317140935536|-2.43317140935536|-2.43317140935536|-2.43317140935536|2.32438192199972|-2.43317140935536","pHILIC",5e+05,"[M+H]+","YES","Y","Nucleotide","""Purine Metabolism, Adenine containing""","N1-methyladenosine",543272.488946279
+"pRPLC_312.1305_2.8","312.1305_2.8","N2,N2-Dimethylguanosine","","HMDB04824","2140-67-2","HMDB","0.80778606","pRPLC",20000,"[M+H]+","YES","Y","Nucleotide","""Purine Metabolism, Guanine containing""","N2,N2-Dimethylguanosine",22571.6899107034
+"nRPLC_411.127_3.6","411.127_3.6","N6-Carbamoyl-L-threonyladenosine","","HMDB41623","","HMDB","0.044534029","nRPLC",20000,"[M-H]-","YES","Y","Nucleotide","""Purine Metabolism, Adenine containing""","N6-Carbamoyl-L-threonyladenosine",19343.2457115189
+"pRPLC_310.3104_11.1","310.3104_11.1","Oleoyl Ethyl Amide","","","","","-0.145084214","pRPLC",1e+05,"[M+H]+","YES","Y","Lipid","Long Chain Fatty Acid","Oleoyl Ethyl Amide",180217.381895923
+"nHILIC_287.052_8.1","287.052_8.1","Orotidine","C01103","HMDB00788","314-50-1","HMDB","-0.29636261","nHILIC",1e+05,"[M-H]-","YES","Y","Nucleotide","""Pyrimidine Metabolism, Orotate containing""","Orotidine",108933.221253313
+"nHILIC_88.988_11","88.988_11","Oxalate (ethanedioate)","C00209","HMDB02329","","","-0.317261083","nHILIC",2e+05,"[M-H]-","YES","Y","Cofactors and Vitamins","Ascorbate and Aldarate Metabolism","Oxalate (ethanedioate)",185575.736972802
+"nRPLC_283.0822_2.4","283.0822_2.4","p-Cresol glucuronide","","HMDB11686","","","-0.432490496","nRPLC",30000,"[M-H]-","YES","Y","Amino Acid","Tyrosine Metabolism","p-Cresol glucuronide",54536.0726051111
+"nRPLC_187.007_2.3","187.007_2.3","p-Cresol sulfate","","HMDB0011635","","HMDB","-0.262926837132504|3.62609691143212|0.819740926145161|0.819740926145161","nRPLC",2e+07,"[M-H]-","YES","Y","Amino Acid","Tyrosine Metabolism","p-Cresol sulfate",17881105.7147503
+"nRPLC_312.2546_10.4","312.2546_10.4","Palmitoylglycine","","HMDB13034","158305-64-7","HMDB","0.593781152","nRPLC",10000,"[M-H]-","YES","Y","Lipid","Fatty Acid Metabolism(Acyl Glycine)","Palmitoylglycine",12132.0694067278
+"pRPLC_181.0718_3.1","181.0718_3.1","Paraxanthine","C13747","HMDB01860","611-59-6","HMDB","-1.141368661","pRPLC",1e+06,"[M+H]+","YES","Y","Xenobiotics","Xanthine Metabolism","Paraxanthine",1875926.3698157
+"pHILIC_732.5525_5.1","732.5525_5.1","PC(32:1)","","","","","-1.756540765","pHILIC",3e+06,"[M+H]+","YES","Y","","","PC(32:1)",4487452.58646876
+"pHILIC_746.5694_5.1","746.5694_5.1","PC(33:1)","","","","","-0.047015532","pHILIC",9e+05,"[M+H]+","YES","Y","","","PC(33:1)",1449721.61659469
+"pHILIC_740.522_4.4","740.522_4.4","PC(33:4)","","","","","-0.655647531","pHILIC",1e+06,"[M+H]+","YES","Y","","","PC(33:4)",1396459.05666167
+"pHILIC_758.5668_5.1","758.5668_5.1","PC(34:2)","","","","","-3.478344514","pHILIC",9e+07,"[M+H]+","YES","Y","","","PC(34:2)",134071959.911157
+"pHILIC_754.5367_5.1","754.5367_5.1","PC(34:4)","","","","","-1.904272032","pHILIC",2e+05,"[M+H]+","YES","Y","","","PC(34:4)",349883.379017442
+"pHILIC_772.5828_5.1","772.5828_5.1","PC(35:2)","","","","","-2.961624547","pHILIC",2e+06,"[M+H]+","YES","Y","","","PC(35:2)",2494047.15408437
+"pHILIC_768.5548_4.4","768.5548_4.4","PC(35:4)","","","","","1.322408025","pHILIC",2e+06,"[M+H]+","YES","Y","","","PC(35:4)",2871776.32608563
+"pHILIC_786.5972_5.1","786.5972_5.1","PC(36:2)","","","","","-4.500033554","pHILIC",4e+07,"[M+H]+","YES","Y","","","PC(36:2)",60016902.0548643
+"pHILIC_782.5665_5.1","782.5665_5.1","PC(36:4)","","","","","-3.755381454","pHILIC",4e+07,"[M+H]+","YES","Y","","","PC(36:4)",71577205.8319258
+"pHILIC_778.5358_5.1","778.5358_5.1","PC(36:6)","","","","","-3.003008816","pHILIC",1e+05,"[M+H]+","YES","Y","","","PC(36:6)",181056.080780301
+"pHILIC_792.5536_4.5","792.5536_4.5","PC(37:6)","","","","","-0.233705843","pHILIC",7e+05,"[M+H]+","YES","Y","","","PC(37:6)",875774.634179409
+"pHILIC_810.597_4.8","810.597_4.8","PC(38:4)","","","","","-4.613671478","pHILIC",2e+07,"[M+H]+","YES","Y","","","PC(38:4)",1724235106.30725
+"pHILIC_806.567_4.8","806.567_4.8","PC(38:6)","","","","","-3.022808787","pHILIC",1e+07,"[M+H]+","YES","Y","","","PC(38:6)",286283064.776762
+"pHILIC_834.5972_4.7","834.5972_4.7","PC(40:6)","","","","","-4.240911406","pHILIC",4e+06,"[M+H]+","YES","Y","","","PC(40:6)",1033180905.05287
+"pHILIC_742.5724_5.1","742.5724_5.1","PC(P-34:2)","","","","","-2.85939959","pHILIC",2e+06,"[M+H]+","YES","Y","","","PC(P-34:2)",2459365.77942056
+"pHILIC_738.5403_4.4","738.5403_4.4","PC(P-34:4)","","","","","-3.959555601","pHILIC",2e+05,"[M+H]+","YES","Y","","","PC(P-34:4)",258031.155537207
+"pHILIC_764.5577_5","764.5577_5","PC(P-36:5)","","","","","-1.532795961","pHILIC",1e+05,"[M-H]-","YES","Y","","","PC(P-36:5)",216697.931495116
+"pHILIC_790.5707_2","790.5707_2","PC(P-38:6)","","","","","-4.838662612","pHILIC",1e+05,"[M+H]+","YES","Y","","","PC(P-38:6)",36436730.7765017
+"pHILIC_816.5884_5","816.5884_5","PC(P-40:7)","","","","","-2.170838629","pHILIC",1e+05,"[M+H]+","YES","Y","","","PC(P-40:7)",183312.274582332
+"pHILIC_850.6644_5","850.6644_5","PC(P-42:5)","","","","","-4.732279534","pHILIC",3e+05,"[M+H]+","YES","Y","","","PC(P-42:5)",744638.653751529
+"nHILIC_716.5258_4.7","716.5258_4.7","PE(34:1)","","","","","3.101006855","nHILIC",60000,"[M-H]-","YES","Y","","","PE(34:1)",91053.0190201835
+"pHILIC_716.5208_3.9","716.5208_3.9","PE(34:2)","","","","","-2.354757741","pHILIC",8e+05,"[M+H]+","YES","Y","","","PE(34:2)",1036554.92362895
+"nHILIC_742.5417_4.6","742.5417_4.6","PE(36:2)","","","","","3.328645545","nHILIC",4e+06,"[M-H]-","YES","Y","","","PE(36:2)",4361437.97657492
+"nHILIC_740.525_4.5","740.525_4.5","PE(36:3)","","","","","1.921797659","nHILIC",2e+05,"[M-H]-","YES","Y","","","PE(36:3)",237778.71058104
+"nHILIC_738.511_4.5","738.511_4.5","PE(36:4)","","","","","4.158300184","nHILIC",4e+05,"[M-H]-","YES","Y","","","PE(36:4)",433102.703465851
+"pHILIC_738.5049_3.9","738.5049_3.9","PE(36:5)","","","","","-2.623462026","pHILIC",1e+05,"[M+H]+","YES","Y","","","PE(36:5)",231362.231873159
+"pHILIC_764.5217_4.2","764.5217_4.2","PE(38:6)","","","","","-1.027958319","pHILIC",1e+06,"[M+H]+","YES","Y","","","PE(38:6)",1872642.66880632
+"nHILIC_700.5312_4.5","700.5312_4.5","PE(P-34:1)","","","","","3.620182032","nHILIC",60000,"[M-H]-","YES","Y","","","PE(P-34:1)",90648.3953498471
+"pHILIC_728.5563_4.5","728.5563_4.5","PE(P-36:2)","","","","","-3.532912463","pHILIC",8e+05,"[M+H]+","YES","Y","","","PE(P-36:2)",919968.524424057
+"nHILIC_724.5298_4.4","724.5298_4.4","PE(P-36:3)","","","","","1.57083219","nHILIC",4e+05,"[M-H]-","YES","Y","","","PE(P-36:3)",470907.857176351
+"pHILIC_724.5254_4.4","724.5254_4.4","PE(P-36:4)","","","","","-2.99956413","pHILIC",3e+06,"[M+H]+","YES","Y","","","PE(P-36:4)",3189886.13057085
+"pHILIC_722.5093_4.2","722.5093_4.2","PE(P-36:5)","","","","","-3.631556014","pHILIC",2e+05,"[M+H]+","YES","Y","","","PE(P-36:5)",256706.845536595
+"pHILIC_752.5554_4.3","752.5554_4.3","PE(P-38:4)","","","","","-4.617624484","pHILIC",4e+06,"[M+H]+","YES","Y","","","PE(P-38:4)",4746778.25347605
+"pHILIC_750.5399_3.1","750.5399_3.1","PE(P-38:5)","","","","","-4.429831219","pHILIC",3e+06,"[M+H]+","YES","Y","","","PE(P-38:5)",5125911.92798879
+"nHILIC_746.5159_4.2","746.5159_4.2","PE(P-38:6)","","","","","3.865781125","nHILIC",9e+05,"[M-H]-","YES","Y","","","PE(P-38:6)",1015193.5966055
+"pHILIC_776.5554_3","776.5554_3","PE(P-40:6)","","","","","-4.474728145","pHILIC",1e+06,"[M+H]+","YES","Y","","","PE(P-40:6)",2494677.80316315
+"nHILIC_777.5678_4.3","777.5678_4.3","PG(36:0)","","","","","3.46095331","nHILIC",3e+05,"[M-H]-","YES","Y","","","PG(36:0)",362565.102202854
+"nRPLC_172.9914_0.9","172.9914_0.9","Phenol sulphate","C00850","HMDB60015","","HMDB","0.003620717","nRPLC",1e+06,"[M-H]-","YES","Y","Amino Acid","Tyrosine Metabolism","Phenol sulphate",2244594.12642679
+"pRPLC_313.1548_3.5","313.1548_3.5","Phenylalanylphenylalanine","","HMDB13302","2577-40-4","HMDB","0.40840946","pRPLC",20000,"[M+H]+","YES","Y","Peptide","Dipeptide","Phenylalanylphenylalanine",24994.2125917431
+"nRPLC_163.0765_7.4","163.0765_7.4","Phenylbutyric acid","","HMDB00329","90-27-7","HMDB","0.306989515","nRPLC",60000,"[M-H]-","YES","Y","Xenobiotics","Benzoate Metabolism","Phenylbutyric acid",67820.1628722732
+"nRPLC_165.0556_2.3","165.0556_2.3","Phenyllactate (PLA)","C05607","HMDB00779","","","-0.687607008","nRPLC",70000,"[M-H]-","YES","Y","Amino Acid","Phenylalanine Metabolism","Phenyllactate (PLA)",72163.0986654434
+"nHILIC_835.537_5.2","835.537_5.2","PI(34:1)","","","","","3.348071426","nHILIC",3e+05,"[M-H]-","YES","Y","","","PI(34:1)",345572.869811417
+"nHILIC_833.5227_5.2","833.5227_5.2","PI(34:2)","","","","","4.97390639","nHILIC",4e+05,"[M-H]-","YES","Y","","","PI(34:2)",439313.978604485
+"nHILIC_969.5442_9.2","969.5442_9.2","PIP(38:2)","","","","","-3.379307608","nHILIC",90000,"[M-H]-","YES","Y","","","PIP(38:2)",99117.3563546428
+"nRPLC_495.2962_9.1","495.2962_9.1","Pregnanediol-3-glucuronide","C03033","HMDB10318","","HMDB","-0.278829397","nRPLC",50000,"[M-H]-","YES","Y","Lipid","Progestin Steroids","Pregnanediol-3-glucuronide",91095.2326315556
+"nRPLC_397.2054_9.6","397.2054_9.6","Pregnanolone sulfate","","","","","2.198993262","nRPLC",2e+06,"[M-H]-","YES","Y","Lipid","Progestin Steroids","Pregnanolone sulfate",2492431.77938838
+"nRPLC_395.1897_10","395.1897_10","Pregnenolone sulfate","","HMDB00774","1247-64-9","HMDB","-0.163615583","nRPLC",2e+05,"[M-H]-","YES","Y","Lipid","Progestin Steroids","Pregnenolone sulfate",207310.860395107
+"pHILIC_219.0795_5","219.0795_5","Pro-Cys or Cys-Pro","||","HMDB28783|HMDB29014|","||","HMDB|HMDB|Drugbank","-1.34365578532509|-1.34365578532509|2.74010600703997","pHILIC",1e+06,"[M+H]+","YES","Y","Peptide","Dipeptide","Pro-Cys or Cys-Pro",1359196.62924922
+"pHILIC_229.1181_10.9","229.1181_10.9","pro-hydroxy-pro","","HMDB06695","","","-0.819820822","pHILIC",3e+05,"[M+H]+","YES","Y","Amino Acid","Urea cycle; Arginine and Proline Metabolism","pro-hydroxy-pro",307135.236847706
+"pRPLC_676.417_10.7","676.417_10.7","PS(28:2)","","HMDB12342","","HMDB","-2.093130967","pRPLC",20000,"[M+H]+","YES","Y","","","PS(28:2)",28662.0765607863
+"pRPLC_706.4648_11.2","706.4648_11.2","PS(30:1)","","","","","-0.799357840943465|-0.799357840943465|-0.799357840943465|-0.799357840943465|-4.15811713242703","pRPLC",1e+05,"[M+H]+","YES","Y","","","PS(30:1)",195700.053012678
+"pRPLC_704.4472_10.9","704.4472_10.9","PS(30:2)","","","","","-3.57365132211743|-3.57365132211743|-3.87512554039268","pRPLC",90000,"[M+H]+","YES","Y","","","PS(30:2)",106832.863585519
+"pRPLC_730.4663_11.3","730.4663_11.3","PS(32:3)","","","","","1.283261944","pRPLC",50000,"[M+H]+","YES","Y","","","PS(32:3)",88801.3255105558
+"nHILIC_243.0621_5.8","243.0621_5.8","Pseudouridine","C02067","HMDB00767","1445-07-4","HMDB","-0.639678767","nHILIC",4e+06,"[M-H]-","YES","Y","Nucleotide","""Pyrimidine Metabolism, Uracil containing""","Pseudouridine",3621498.36168909
+"pRPLC_647.5116_11.7","647.5116_11.7","SM(d18:1/12:0)","C00550","HMDB12096","","HMDB","-1.012407775","pRPLC",2e+05,"[M+H]+","YES","Y","","","SM(d18:1/12:0)",327144.231265851
+"pRPLC_675.5429_12.6","675.5429_12.6","SM(d18:1/14:0)","","HMDB12097","","HMDB","-0.97052547","pRPLC",6e+06,"[M+H]+","YES","Y","","","SM(d18:1/14:0)",7753977.13475025
+"pHILIC_703.5724_5.7","703.5724_5.7","SM(d18:1/16:0)","C00550","HMDB13464","","HMDB","-3.494027714","pHILIC",1e+07,"[M+H]+","YES","Y","","","SM(d18:1/16:0)",15280610.1709847
+"pHILIC_731.6033_5.7","731.6033_5.7","SM(d18:1/18:0)","C00550","HMDB12088","","HMDB","-3.907645158","pHILIC",3e+06,"[M+H]+","YES","Y","","","SM(d18:1/18:0)",3312948.86080591
+"pHILIC_785.6497_5.6","785.6497_5.6","SM(d18:1/22:1)","C00550","HMDB12104","","HMDB","-4.33968635","pHILIC",6e+06,"[M+H]+","YES","Y","","","SM(d18:1/22:1)",7113340.70454638
+"pHILIC_813.6806_5.6","813.6806_5.6","SM(d18:1/24:1)","C00550","HMDB12107","","HMDB","-4.682361173","pHILIC",8e+06,"[M+H]+","YES","Y","","","SM(d18:1/24:1)",9151088.07254077
+"nHILIC_214.0488_7.2","214.0488_7.2","sn-glycero-3-Phosphoethanolamine","C01233","HMDB00114","1190-00-7","HMDB","0.959298616","nHILIC",4e+05,"[M-H]-","YES","Y","Lipid","Phospholipid Metabolism","sn-glycero-3-Phosphoethanolamine",454333.283883792
+"pRPLC_382.2719_9.6","382.2719_9.6","Sphinganine 1-phosphate","C01120","HMDB01383","19794-97-9","HMDB","0.551042475","pRPLC",40000,"[M+H]+","YES","Y","Lipid","Sphingolipid Metabolism","Sphinganine 1-phosphate",52742.9095773293
+"nRPLC_455.2472_11","455.2472_11","Sulfolithocholic acid","","HMDB00907","34669-57-3","HMDB","-0.1746876","nRPLC",2e+05,"[M-H]-","YES","Y","Lipid","Secondary Bile Acid Metabolism","Sulfolithocholic acid",254661.729426606
+"nRPLC_514.2838_9.6","514.2838_9.6","Taurocholic acid","C05122","HMDB00036","81-24-3","HMDB","-1.151754849","nRPLC",60000,"[M-H]-","YES","Y","Lipid","Primary Bile Acid Metabolism","Taurocholic acid",524948.517295107
+"nRPLC_498.2892_10.3","498.2892_10.3","Tauroursodeoxycholic acid","","HMDB00874","14605-22-2","HMDB","-0.55851986","nRPLC",3e+05,"[M-H]-","YES","Y","Lipid","Secondary Bile Acid Metabolism","Tauroursodeoxycholic acid",1287255.96127625
+"nRPLC_539.2494_7","539.2494_7","Tetrahydroaldosterone-3-glucuronide","","HMDB10357","20605-81-6","HMDB","-0.707297131","nRPLC",6e+05,"[M-H]-","YES","Y","Lipid","Androgenic Steroids","Tetrahydroaldosterone-3-glucuronide",642400.722422243
+"nRPLC_365.2333_9.7","365.2333_9.7","Tetrahydrocortisol","C05472","HMDB00949","53-02-1","HMDB","-0.120680237","nRPLC",2e+05,"[M-H]-","YES","Y","Lipid","Androgenic Steroids","Tetrahydrocortisol",161875.914821611
+"nHILIC_135.0299_7.9","135.0299_7.9","Threonic acid","C01620","HMDB00943","12/4/09","HMDB","0.04876608","nHILIC",2e+06,"[M-H]-","YES","Y","Cofactors and Vitamins","Ascorbate and Aldarate Metabolism","Threonic acid",2638733.67549286
+"pHILIC_247.1437_5.3","247.1437_5.3","Tryptophan betaine","C09213","HMDB61115","","","-1.656926675","pHILIC",1e+06,"[M+H]+","YES","Y","Amino Acid","Tryptophan Metabolism","Tryptophan betaine",2191858.73993137
+"nHILIC_111.0199_3.4","111.0199_3.4","Uracil","C00106","HMDB00300","66-22-8","HMDB","-0.869271189","nHILIC",80000,"[M-H]-","YES","Y","Nucleotide","""Pyrimidine Metabolism, Uracil containing""","Uracil",86078.9332517839

@@ -1,0 +1,13 @@
+INFO [2023-10-25 14:38:37] $x
+INFO [2023-10-25 14:38:37] list(Linear = cytokine_variable_info$variable_id[cytokine_variable_info$cor_p < 
+INFO [2023-10-25 14:38:37]     0.05], Changed = cytokine_all_marker_name)
+INFO [2023-10-25 14:38:37] 
+INFO [2023-10-25 14:38:37] $category.names
+INFO [2023-10-25 14:38:37] c("Linear", "Changed")
+INFO [2023-10-25 14:38:37] 
+INFO [2023-10-25 14:38:37] $filename
+INFO [2023-10-25 14:38:37] NULL
+INFO [2023-10-25 14:38:37] 
+INFO [2023-10-25 14:38:37] $fill
+INFO [2023-10-25 14:38:37] c("red", "darkblue")
+INFO [2023-10-25 14:38:37] 

@@ -1,0 +1,13 @@
+INFO [2023-06-12 15:09:40] $x
+INFO [2023-06-12 15:09:40] list(Linear = lipidomics_variable_info$variable_id[lipidomics_variable_info$cor_p < 
+INFO [2023-06-12 15:09:40]     0.05], Changed = lipidomics_all_marker_name)
+INFO [2023-06-12 15:09:40] 
+INFO [2023-06-12 15:09:40] $category.names
+INFO [2023-06-12 15:09:40] c("Linear", "Changed")
+INFO [2023-06-12 15:09:40] 
+INFO [2023-06-12 15:09:40] $filename
+INFO [2023-06-12 15:09:40] NULL
+INFO [2023-06-12 15:09:40] 
+INFO [2023-06-12 15:09:40] $fill
+INFO [2023-06-12 15:09:40] c("red", "darkblue")
+INFO [2023-06-12 15:09:40] 

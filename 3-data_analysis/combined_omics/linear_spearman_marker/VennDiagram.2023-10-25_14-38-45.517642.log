@@ -1,0 +1,13 @@
+INFO [2023-10-25 14:38:45] $x
+INFO [2023-10-25 14:38:45] list(Linear = gut_microbiome_variable_info$variable_id[gut_microbiome_variable_info$cor_p < 
+INFO [2023-10-25 14:38:45]     0.05], Changed = gut_microbiome_all_marker_name)
+INFO [2023-10-25 14:38:45] 
+INFO [2023-10-25 14:38:45] $category.names
+INFO [2023-10-25 14:38:45] c("Linear", "Changed")
+INFO [2023-10-25 14:38:45] 
+INFO [2023-10-25 14:38:45] $filename
+INFO [2023-10-25 14:38:45] NULL
+INFO [2023-10-25 14:38:45] 
+INFO [2023-10-25 14:38:45] $fill
+INFO [2023-10-25 14:38:45] c("red", "darkblue")
+INFO [2023-10-25 14:38:45] 

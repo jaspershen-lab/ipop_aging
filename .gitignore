@@ -1,25 +1,106 @@
-.Rproj.user
-.Rhistory
-.RData
-.Ruserdata
 
+# Ignore all .ai files
+# Ignore all .png files
+*.ai
+*.png
+.RData
+.Rhistory
+.Rproj.user
+.Ruserdata
 2-data
 2-data/
 
-3-data_analysis
-3-data_analysis/
-
+###ignore all files > 5M
+3-data_analysis/combined_omics/DE_SWAN/proteomics_pathway/GO_KEGG_Reactome_sim_plot.pdf
+3-data_analysis/combined_omics/DE_SWAN/proteomics_pathway_crest2/GO_KEGG_Reactome_sim_plot.pdf
+3-data_analysis/combined_omics/DE_SWAN/res.DEswan
+3-data_analysis/combined_omics/DE_SWAN/transcriptome_pathway/GO_KEGG_Reactome_sim_plot.pdf
+3-data_analysis/combined_omics/DE_SWAN/transcriptome_pathway/GO_result/transcriptome_crest1_go
+3-data_analysis/combined_omics/DE_SWAN/transcriptome_pathway/Reactome_result/Reactome_sim_plot.pdf
+3-data_analysis/combined_omics/DE_SWAN/transcriptome_pathway_crest2/GO_KEGG_Reactome_sim_plot.pdf
+3-data_analysis/combined_omics/DE_SWAN/transcriptome_pathway_crest2/GO_result/GO_sim_plot/Module 109_sim_plot.pdf
+3-data_analysis/combined_omics/DE_SWAN/transcriptome_pathway_crest2/GO_result/GO_sim_plot/Module 10_sim_plot.pdf
+3-data_analysis/combined_omics/DE_SWAN/transcriptome_pathway_crest2/GO_result/GO_sim_plot/Module 12_sim_plot.pdf
+3-data_analysis/combined_omics/DE_SWAN/transcriptome_pathway_crest2/GO_result/GO_sim_plot/Module 13_sim_plot.pdf
+3-data_analysis/combined_omics/DE_SWAN/transcriptome_pathway_crest2/GO_result/GO_sim_plot/Module 14_sim_plot.pdf
+3-data_analysis/combined_omics/DE_SWAN/transcriptome_pathway_crest2/GO_result/GO_sim_plot/Module 17_sim_plot.pdf
+3-data_analysis/combined_omics/DE_SWAN/transcriptome_pathway_crest2/GO_result/GO_sim_plot/Module 22_sim_plot.pdf
+3-data_analysis/combined_omics/DE_SWAN/transcriptome_pathway_crest2/GO_result/GO_sim_plot/Module 26_sim_plot.pdf
+3-data_analysis/combined_omics/DE_SWAN/transcriptome_pathway_crest2/GO_result/GO_sim_plot/Module 31_sim_plot.pdf
+3-data_analysis/combined_omics/DE_SWAN/transcriptome_pathway_crest2/GO_result/GO_sim_plot/Module 40_sim_plot.pdf
+3-data_analysis/combined_omics/DE_SWAN/transcriptome_pathway_crest2/GO_result/GO_sim_plot/Module 41_sim_plot.pdf
+3-data_analysis/combined_omics/DE_SWAN/transcriptome_pathway_crest2/GO_result/GO_sim_plot/Module 4_sim_plot.pdf
+3-data_analysis/combined_omics/DE_SWAN/transcriptome_pathway_crest2/GO_result/GO_sim_plot/Module 59_sim_plot.pdf
+3-data_analysis/combined_omics/DE_SWAN/transcriptome_pathway_crest2/GO_result/GO_sim_plot/Module 70_sim_plot.pdf
+3-data_analysis/combined_omics/DE_SWAN/transcriptome_pathway_crest2/GO_result/GO_sim_plot/Module 9_sim_plot.pdf
+3-data_analysis/combined_omics/DE_SWAN/transcriptome_pathway_crest2/GO_result/transcriptome_crest2_go
+3-data_analysis/combined_omics/DE_SWAN/transcriptome_pathway_crest2/Reactome_result/Reactome_sim_plot.pdf
+3-data_analysis/combined_omics/DE_SWAN/transcriptome_pathway_crest2/Reactome_result/Reactome_sim_plot/Module 8_sim_plot.pdf
+3-data_analysis/combined_omics/DE_SWAN/transcriptome_proteome_metabolome_summary/network.pdf
+3-data_analysis/combined_omics/Female/fuzzy_c_means_clustering/cross_section_loess/temp_data.txt
+3-data_analysis/combined_omics/Male/fuzzy_c_means_clustering/cross_section_loess/temp_data.txt
+3-data_analysis/combined_omics/correlation_data/cor_data
+3-data_analysis/combined_omics/data_preparation/Female/cross_section_loess/object_cross_section_loess
+3-data_analysis/combined_omics/data_preparation/Male/cross_section_loess/object_cross_section_loess
+3-data_analysis/combined_omics/data_preparation/cross_section/object_cross_section
+3-data_analysis/combined_omics/data_preparation/cross_section_loess/object_corss_section_loess
+3-data_analysis/combined_omics/data_preparation/cross_section_loess/object_cross_section_loess
+3-data_analysis/combined_omics/fuzzy_c_means_clustering/cross_section_loess/cluster_2/transcriptome_pathway/GO_result/transcriptome_go
+3-data_analysis/combined_omics/fuzzy_c_means_clustering/cross_section_loess/cluster_5/transcriptome_pathway/GO_result/transcriptome_go
+3-data_analysis/combined_omics/fuzzy_c_means_clustering/cross_section_loess/permutation/temp_data.txt
+3-data_analysis/combined_omics/fuzzy_c_means_clustering/cross_section_loess/temp_data.txt
+3-data_analysis/combined_omics/fuzzy_c_means_clustering/cross_section_loess_only_transcriptomics/temp_data.txt
+3-data_analysis/combined_omics/individual/DE_SWAN/new_expression_data
+3-data_analysis/combined_omics/individual/DE_SWAN/object_loess
+3-data_analysis/correlation_network/data_preparation/transcriptome_object_corss_section_loess
+3-data_analysis/correlation_network/transcriptome_vs_transcriptome/transcriptome_cor_data
+3-data_analysis/other/hmdb_ms2.rda
+3-data_analysis/other/massbank_ms2.rda
+3-data_analysis/other/mona_ms2.rda
+3-data_analysis/other/nist_ms2.rda
+3-data_analysis/plasma_lipidomics/data_preparation/cluster_1/network.pdf
+3-data_analysis/plasma_lipidomics/data_preparation/object
+3-data_analysis/plasma_lipidomics/data_preparation/temp_data.txt
+3-data_analysis/plasma_metabolomics/data_preparation/metabolite/expression_data.xlsx
+3-data_analysis/plasma_metabolomics/data_preparation/metabolite/object
+3-data_analysis/plasma_metabolomics/data_preparation/peak/expression_data.xlsx
+3-data_analysis/plasma_metabolomics/data_preparation/peak/object
+3-data_analysis/plasma_metabolomics/data_preparation/peak/object_cross_section
+3-data_analysis/plasma_transcriptome/DEG/cross_section_loess/permutation/permutated_difference_2
+3-data_analysis/plasma_transcriptome/DEG/cross_section_loess/permutation/permutated_difference_3
+3-data_analysis/plasma_transcriptome/DEG/cross_section_loess/permutation/permutated_difference_4
+3-data_analysis/plasma_transcriptome/DEG/cross_section_loess/permutation/permutated_difference_5
+3-data_analysis/plasma_transcriptome/DEG/cross_section_loess/permutation/permutated_difference_6
+3-data_analysis/plasma_transcriptome/DEG/cross_section_loess/permutation/permutated_difference_7
+3-data_analysis/plasma_transcriptome/data_preparation/Female/new_expression_data
+3-data_analysis/plasma_transcriptome/data_preparation/Female/object_cross_section_loess
+3-data_analysis/plasma_transcriptome/data_preparation/Male/new_expression_data
+3-data_analysis/plasma_transcriptome/data_preparation/Male/object_cross_section_loess
+3-data_analysis/plasma_transcriptome/data_preparation/expression_data
+3-data_analysis/plasma_transcriptome/data_preparation/new_expression_data
+3-data_analysis/plasma_transcriptome/data_preparation/object
+3-data_analysis/plasma_transcriptome/data_preparation/object_cross_section_loess
+3-data_analysis/plasma_transcriptome/data_preparation/same_samples/object_cross_section_loess
+3-data_analysis/plasma_transcriptome/linear_spearman/cross_section/lm_result
+3-data_analysis/tony_NM/41591_2019_673_MOESM3_ESM.xlsx
+3-data_analysis/tony_NM_2019/41591_2019_673_MOESM3_ESM.xlsx
+4-manuscript/Figures/Figure_2/Figure_2.ai
+4-manuscript/Figures/Figure_2/temp.ai
+4-manuscript/Figures/Figure_5/Figure_5.ai
+4-manuscript/Figures/Figure_S1/Figure_S1.ai
 4-manuscript/Figures/Figure_S13
 4-manuscript/Figures/Figure_S13/
-
+4-manuscript/Figures/Figure_S2/Figure_S2.ai
+4-manuscript/Figures/Figure_S6/Figure_S6.ai
 4-manuscript/Submission
 4-manuscript/Submission/
-
+4-manuscript/Submission/Nature Aging/Submission1/revised manuscript copy.docx
+4-manuscript/Submission/Nature Aging/Submission1/revised manuscript.docx
+4-manuscript/Submission/Nature Aging/Submission1/revised supplementary.docx
+4-manuscript/Submission/Nature Aging/Submission2/Manuscript.docx
+4-manuscript/Submission/Nature Aging/Submission2/Supplementary.docx
+4-manuscript/Submission/nature medicine/multi-omics-aging-manuscript.docx
+4-manuscript/Submission/nature medicine/multi-omics-aging-manuscript2.docx
+4-manuscript/Submission/nature medicine/multi-omics-aging-suppmenentary.docx
 4-manuscript/Supplementary_data
 4-manuscript/Supplementary_data/
-
-# Ignore all .ai files
-*.ai
-
-# Ignore all .png files
-*.png
