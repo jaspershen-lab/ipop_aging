@@ -3,6 +3,7 @@
 # Ignore all .png files
 *.ai
 *.png
+*.pdf
 .RData
 .Rhistory
 .Rproj.user
