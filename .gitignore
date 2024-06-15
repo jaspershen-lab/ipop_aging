@@ -9,5 +9,17 @@
 3-data_analysis
 3-data_analysis/
 
-4-manuscript
-4-manuscript/
+4-manuscript/Figures/Figure_S13
+4-manuscript/Figures/Figure_S13/
+
+4-manuscript/Submission
+4-manuscript/Submission/
+
+4-manuscript/Supplementary_data
+4-manuscript/Supplementary_data/
+
+# Ignore all .ai files
+*.ai
+
+# Ignore all .png files
+*.png
