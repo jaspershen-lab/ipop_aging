@@ -11,6 +11,15 @@
 2-data
 2-data/
 
+3-data_analysis
+3-data_analysis/
+
+4-manuscript
+4-manuscript/
+
+5-summary
+5-summary/
+
 ###ignore all files > 5M
 3-data_analysis/combined_omics/DE_SWAN/proteomics_pathway/GO_KEGG_Reactome_sim_plot.pdf
 3-data_analysis/combined_omics/DE_SWAN/proteomics_pathway_crest2/GO_KEGG_Reactome_sim_plot.pdf
