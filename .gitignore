@@ -11,9 +11,6 @@
 2-data
 2-data/
 
-3-data_analysis
-3-data_analysis/
-
 4-manuscript
 4-manuscript/
 
@@ -86,7 +83,6 @@
 3-data_analysis/plasma_transcriptome/data_preparation/Male/object_cross_section_loess
 3-data_analysis/plasma_transcriptome/data_preparation/expression_data
 3-data_analysis/plasma_transcriptome/data_preparation/new_expression_data
-3-data_analysis/plasma_transcriptome/data_preparation/object
 3-data_analysis/plasma_transcriptome/data_preparation/object_cross_section_loess
 3-data_analysis/plasma_transcriptome/data_preparation/same_samples/object_cross_section_loess
 3-data_analysis/plasma_transcriptome/linear_spearman/cross_section/lm_result
