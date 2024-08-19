@@ -11,7 +11,7 @@ iPOP Aging is a research project focused on studying the effects of aging on the
 ## Repository Structure
 
 - `1-code/`: This directory contains the code for the project.
-- `3-data_analysis/`: This directory contains the data analysis results for the project.
+- `3-data_analysis/`: This directory contains the processed data of omics data, and analysis results for the project.
 - `4-manuscript/`: This directory contains the manuscript for the project.
 - `5-summary/`: This directory contains the summary for the project.
 
