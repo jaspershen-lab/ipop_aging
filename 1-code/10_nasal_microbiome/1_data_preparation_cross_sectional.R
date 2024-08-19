@@ -12,6 +12,10 @@ setwd("3-data_analysis/nasal_microbiome/data_preparation")
 
 load("object")
 
+massdataset::export_mass_dataset(object = object, 
+                                 file_type = "xlsx")
+
+
 dim(object)
 
 object <-

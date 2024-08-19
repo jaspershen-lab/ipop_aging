@@ -12,6 +12,10 @@ setwd("3-data_analysis/clinical_test/data_preparation")
 
 load("object")
 
+
+massdataset::export_mass_dataset(object = object, 
+                                 file_type = "xlsx")
+
 sum(object < 0, na.rm = TRUE)
 
 dim(object)

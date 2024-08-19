@@ -11,6 +11,9 @@ load("3-data_analysis/plasma_metabolomics/data_preparation/metabolite/object")
 
 setwd("3-data_analysis/plasma_metabolomics/data_preparation/metabolite")
 
+massdataset::export_mass_dataset(object = object, 
+                                 file_type = "xlsx")
+
 object
 
 dim(object)

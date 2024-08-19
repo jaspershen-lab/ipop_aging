@@ -12,6 +12,11 @@ setwd("3-data_analysis/plasma_lipidomics/data_preparation")
 
 load("object")
 
+
+massdataset::export_mass_dataset(object = object, 
+                                 file_type = "xlsx")
+
+
 sum(object < 0)
 
 dim(object)

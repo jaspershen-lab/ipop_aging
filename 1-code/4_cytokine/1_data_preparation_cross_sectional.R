@@ -12,6 +12,9 @@ load("3-data_analysis/plasma_cytokine/data_preparation/object")
 
 setwd("3-data_analysis/plasma_cytokine/data_preparation")
 
+massdataset::export_mass_dataset(object = object, 
+                                 file_type = "xlsx")
+
 object
 
 dim(object)

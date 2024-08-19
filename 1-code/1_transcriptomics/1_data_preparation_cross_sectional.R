@@ -11,6 +11,9 @@ load("3-data_analysis/plasma_transcriptome/data_preparation/object")
 
 setwd("3-data_analysis/plasma_transcriptome/data_preparation")
 
+massdataset::export_mass_dataset(object = object, 
+                                 file_type = "xlsx")
+
 table(object@variable_info$GENETYPE)
 
 

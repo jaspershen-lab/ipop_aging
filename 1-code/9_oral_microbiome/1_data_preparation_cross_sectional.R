@@ -14,6 +14,10 @@ load("object")
 
 dim(object)
 
+massdataset::export_mass_dataset(object = object, 
+                                 file_type = "xlsx")
+
+
 object <-
   object %>%
   activate_mass_dataset(what = "sample_info") %>%
