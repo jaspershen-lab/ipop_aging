@@ -635,7 +635,8 @@ do_se_swan <-
   function(object,
            qt = "age",
            window_center,
-           buckets_size) {
+           buckets_size,
+           p.adjust.methods = c("BH", "fdr")) {
     expression_data <-
       massdataset::extract_expression_data(object)
     
