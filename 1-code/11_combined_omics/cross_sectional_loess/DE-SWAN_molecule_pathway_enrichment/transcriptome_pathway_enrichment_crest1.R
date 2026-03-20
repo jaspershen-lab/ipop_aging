@@ -120,6 +120,10 @@ temp_data_transcriptome_crest1 <-
 library(org.Hs.eg.db)
 library(clusterProfiler)
 
+
+write.csv(temp_data_transcriptome_crest1[,c("variable_id", "ENTREZID")], "transcript_crest1.csv")
+
+
 ###GO enrichment
 # transcriptome_crest1_go <-
 #   enrichGO(

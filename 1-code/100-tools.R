@@ -707,6 +707,83 @@ do_se_swan <-
 
 
 
+
+do_se_swan2 <-
+  function(object,
+           qt = "age",
+           window_center,
+           buckets_size) {
+    expression_data <-
+      massdataset::extract_expression_data(object)
+    
+    sample_info <-
+      massdataset::extract_sample_info(object)
+    
+    variable_info <-
+      massdataset::extract_variable_info(object)
+    
+    qt <-
+      sample_info %>%
+      dplyr::pull(qt)
+    
+    
+    if (missing(window_center)) {
+      window_center <-
+        quantile(qt, probs = seq(.1, .9, .1))
+    }
+    
+    if (missing(buckets_size)) {
+      buckets_size <-
+        (max(range(qt)) - min(range(qt))) / 2
+    }
+    
+    p_value <-
+      window_center %>%
+      purrr::map(function(i) {
+        cat(i, " ")
+        left_range <-
+          c(i - buckets_size / 2, i)
+        right_range <-
+          c(i, i + buckets_size / 2)
+        
+        left_idx <-
+          which(qt >= left_range[1] &
+                  qt < left_range[2])
+        
+        control_sample_id <-
+          colnames(object)[left_idx]
+        
+        right_idx <-
+          which(qt >= right_range[1] &
+                  qt < right_range[2])
+        
+        case_sample_id <-
+          colnames(object)[right_idx]
+        
+        p_value <-
+          seq_len(nrow(expression_data)) %>%
+          purrr::map(function(i) {
+            wilcox.test(as.numeric(expression_data[i, control_sample_id]),
+                        as.numeric(expression_data[i, case_sample_id]))$p.value
+          }) %>%
+          unlist()
+        
+        p_value <-
+          data.frame(variable_id = variable_info$variable_id,
+                     p_value) %>%
+          dplyr::mutate(p_value_adjust = p.adjust(p_value, "BH"),
+                        center = i)
+        p_value
+        
+      }) %>%
+      dplyr::bind_rows()
+    
+    p_value
+    
+  }
+
+
+
 match_sample_id <-
   function(sample_info1,
            sample_info2,
@@ -1900,3 +1977,100 @@ new_coords <- function(range_left = 0,
   }
   
 }
+
+
+
+
+
+
+
+
+
+
+do_se_swan3 <-
+  function(object,
+           qt = "age",
+           window_center,
+           buckets_size,
+           sample_selection_number = NULL) {
+    expression_data <-
+      massdataset::extract_expression_data(object)
+    
+    sample_info <-
+      massdataset::extract_sample_info(object)
+    
+    variable_info <-
+      massdataset::extract_variable_info(object)
+    
+    qt <-
+      sample_info %>%
+      dplyr::pull(qt)
+    
+    
+    if (missing(window_center)) {
+      window_center <-
+        quantile(qt, probs = seq(.1, .9, .1))
+    }
+    
+    if (missing(buckets_size)) {
+      buckets_size <-
+        (max(range(qt)) - min(range(qt))) / 2
+    }
+    
+    p_value <-
+      window_center %>%
+      purrr::map(function(i) {
+        cat(i, " ")
+        # browser()
+        left_range <-
+          c(i - buckets_size / 2, i)
+        right_range <-
+          c(i, i + buckets_size / 2)
+        
+        left_idx <-
+          which(qt >= left_range[1] &
+                  qt < left_range[2])
+        
+        if(!is.null(sample_selection_number)) {
+          left_idx <-
+            sort(sample(left_idx, ifelse(sample_selection_number > length(left_idx), 
+                                         length(left_idx), sample_selection_number)))
+        }
+        
+        control_sample_id <-
+          colnames(object)[left_idx]
+        
+        right_idx <-
+          which(qt >= right_range[1] &
+                  qt < right_range[2])
+        
+        if(!is.null(sample_selection_number)) {
+          right_idx <-
+            sort(sample(right_idx, ifelse(sample_selection_number > length(right_idx), 
+                                          length(right_idx), sample_selection_number)))
+        }
+        
+        case_sample_id <-
+          colnames(object)[right_idx]
+        
+        p_value <-
+          seq_len(nrow(expression_data)) %>%
+          purrr::map(function(i) {
+            wilcox.test(as.numeric(expression_data[i, control_sample_id]),
+                        as.numeric(expression_data[i, case_sample_id]))$p.value
+          }) %>%
+          unlist()
+        
+        p_value <-
+          data.frame(variable_id = variable_info$variable_id,
+                     p_value) %>%
+          dplyr::mutate(p_value_adjust = p.adjust(p_value, "BH"),
+                        center = i)
+        p_value
+        
+      }) %>%
+      dplyr::bind_rows()
+    
+    p_value
+    
+  }

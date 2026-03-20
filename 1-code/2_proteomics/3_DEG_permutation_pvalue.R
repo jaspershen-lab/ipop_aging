@@ -8,7 +8,9 @@ library(tidyverse)
 library(tidymass)
 
 ###load("data)
-load("3-data_analysis/plasma_proteomics/data_preparation/object_cross_section_loess")
+load(
+  "3-data_analysis/plasma_proteomics/data_preparation/object_cross_section_loess"
+)
 
 dir.create("3-data_analysis/plasma_proteomics/DEG/cross_section_loess/",
            recursive = TRUE)
@@ -117,7 +119,9 @@ rownames(original_difference) <-
 colnames(original_difference) <-
   names(subject_data2)[-1]
 
-save(original_difference, file = "original_difference")
+# save(original_difference, file = "original_difference")
+
+load("original_difference")
 
 ####permutation
 dir.create("permutation")
@@ -200,9 +204,7 @@ marker_each_point_permutation <-
     idx1 <- which(p.adjust(x$p_value, method = "fdr") < 0.05)
     
     gene1 <-
-      try(data.frame(x[idx1,],
-                     stringsAsFactors = FALSE),
-          silent = TRUE)
+      try(data.frame(x[idx1, ], stringsAsFactors = FALSE), silent = TRUE)
     
     if (class(gene1) == "try-error") {
       gene1 <- NULL
@@ -215,7 +217,7 @@ marker_each_point_permutation[[1]]
 names(marker_each_point_permutation) <-
   names(fc_p_value_permutation)
 
-save(marker_each_point_permutation, file = "marker_each_point_permutation")
+# save(marker_each_point_permutation, file = "marker_each_point_permutation")
 load("marker_each_point_permutation")
 
 #####a sankey
@@ -233,7 +235,7 @@ all_marker_name_permutation <-
 length(all_marker_name_permutation)
 getwd()
 
-save(all_marker_name_permutation, file = "all_marker_name_permutation")
+# save(all_marker_name_permutation, file = "all_marker_name_permutation")
 
 load("all_marker_name_permutation")
 
@@ -246,8 +248,7 @@ temp_data <-
     }
     x$class <- "changed"
     x <-
-      data.frame(variable_id = all_marker_name_permutation,
-                 stringsAsFactors = FALSE) %>%
+      data.frame(variable_id = all_marker_name_permutation, stringsAsFactors = FALSE) %>%
       left_join(x, by = "variable_id") %>%
       dplyr::select(variable_id, class)
     
@@ -256,8 +257,6 @@ temp_data <-
     x
     
   })
-
-
 
 temp_data <-
   purrr::map2(
@@ -294,8 +293,7 @@ plot1 <-
   scale_x_discrete(expand = c(.1, .1)) +
   ggalluvial::geom_flow() +
   labs(x = "", y = "") +
-  scale_fill_manual(values = c("changed" = unname(omics_color["proteomics"]),
-                               "no" = "grey")) +
+  scale_fill_manual(values = c("changed" = unname(omics_color["proteomics"]), "no" = "grey")) +
   ggalluvial::geom_stratum(alpha = 1, color = "black") +
   # geom_text(stat = "stratum", size = 3) +
   theme_bw() +
@@ -323,3 +321,6 @@ ggsave(
   height = 7,
   bg = "transparent"
 )
+
+temp_data %>%
+  dplyr::count(class, point)

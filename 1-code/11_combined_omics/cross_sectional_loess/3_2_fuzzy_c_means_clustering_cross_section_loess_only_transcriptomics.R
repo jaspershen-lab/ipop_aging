@@ -76,7 +76,7 @@ m1
 #     repeats = 3,
 #     visu = TRUE
 #   )
-#
+# 
 # plot <-
 #   plot %>%
 #   data.frame(distance = plot,
@@ -104,9 +104,9 @@ m1
 #   labs(x = "Cluster number",
 #        y = "Min. centroid distance") +
 #   scale_y_continuous(expand = expansion(mult = c(0, 0.1)))
-#
+# 
 # plot
-#
+# 
 # ggsave(plot,
 #        filename = "distance_k_number.pdf",
 #        width = 7,

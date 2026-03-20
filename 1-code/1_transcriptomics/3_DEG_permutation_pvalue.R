@@ -119,7 +119,8 @@ rownames(original_difference) <-
 colnames(original_difference) <-
   names(subject_data2)[-1]
 
-save(original_difference, file = "original_difference")
+# save(original_difference, file = "original_difference")
+load("original_difference")
 
 ####permutation
 dir.create("permutation")
@@ -217,7 +218,7 @@ marker_each_point_permutation[[1]]
 names(marker_each_point_permutation) <-
   names(fc_p_value_permutation)
 
-save(marker_each_point_permutation, file = "marker_each_point_permutation")
+# save(marker_each_point_permutation, file = "marker_each_point_permutation")
 load("marker_each_point_permutation")
 
 #####a sankey
@@ -235,7 +236,7 @@ all_marker_name_permutation <-
 length(all_marker_name_permutation)
 getwd()
 
-save(all_marker_name_permutation, file = "all_marker_name_permutation")
+# save(all_marker_name_permutation, file = "all_marker_name_permutation")
 
 load("all_marker_name_permutation")
 
@@ -258,7 +259,6 @@ temp_data <-
     x
     
   })
-
 
 
 temp_data <-

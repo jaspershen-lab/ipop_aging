@@ -669,9 +669,6 @@ plot
 #        filename = "ethnicity_distribution.pdf",
 #        width = 10,
 #        height = 6)
-<<<<<<< HEAD
-=======
-
 
 subject_info$adjusted_age
 
@@ -688,9 +685,6 @@ subject_info %>%
 
 data.frame(from = subject_info$adjusted_age,
            to = subject_info$adjusted_age + time)
-
->>>>>>> abb848b5143c5dd49832cc7a6dee08d71aa25e89
-
 
 #####circos plot
 library(circlize)

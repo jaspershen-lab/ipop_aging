@@ -38,6 +38,7 @@ variable_info <-
 #   )
 #
 # save(temp_data, file = "temp_data")
+
 load("temp_data")
 
 ##remove the background
@@ -60,7 +61,7 @@ background <-
 plot <-
   temp_data %>%
   dplyr::group_by(center) %>%
-  dplyr::summarise(number = sum(p_value_adjust < 0.05)) %>%
+  dplyr::summarise(number = sum(p_value_adjust < 0.05, na.rm = TRUE)) %>%
   ggplot(aes(center, number)) +
   geom_point() +
   geom_line(aes(group = 1)) +
@@ -74,6 +75,7 @@ plot
 #        filename = "changed_molecules_total2.pdf",
 #        width = 7,
 #        height = 7)
+
 
 
 ####all the molecules
@@ -111,6 +113,17 @@ plot
 #        filename = "changed_molecules2.pdf",
 #        width = 14,
 #        height = 6)
+
+temp <-
+temp_data %>%
+  dplyr::group_by(class, center) %>%
+  dplyr::summarise(number = sum(p_value_adjust < 0.05)) %>%
+  dplyr::mutate(class = factor(class, levels = names(omics_color)))
+
+
+write.csv(temp, "changed_molecules2.csv")
+
+
 
 ####heatmap
 library(ComplexHeatmap)

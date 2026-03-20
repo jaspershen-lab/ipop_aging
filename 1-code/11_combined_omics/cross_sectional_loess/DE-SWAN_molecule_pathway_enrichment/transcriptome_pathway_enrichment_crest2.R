@@ -52,8 +52,15 @@ temp_data_transcriptome_crest2 <-
   temp_data_transcriptome %>%
   dplyr::filter(center == 61)
 
+temp_data_transcriptome_crest1 <-
+  temp_data_transcriptome %>%
+  dplyr::filter(center == 44)
+
 library(org.Hs.eg.db)
 library(clusterProfiler)
+
+write.csv(temp_data_transcriptome_crest2[,c("variable_id", "ENTREZID")], "transcript_crest2.csv")
+write.csv(temp_data_transcriptome_crest1[,c("variable_id", "ENTREZID")], "transcript_crest1.csv")
 
 # ###GO enrichment
 # transcriptome_crest2_go <-

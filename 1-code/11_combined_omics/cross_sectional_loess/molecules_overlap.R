@@ -659,6 +659,6 @@ transcriptome_upset_plot + proteomics_upset_plot + metabolomics_upset_plot + cyt
   skin_microbiome_upset_plot + oral_microbiome_upset_plot + nasal_microbiome_upset_plot +
   plot_layout(nrow = 2) +
   plot_annotation(tag_levels = 'a')
-
+plot
 ggsave(plot, filename = "upset_plot.pdf", width = 16, height = 6)
 
